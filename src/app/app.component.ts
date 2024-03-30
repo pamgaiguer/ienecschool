@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { initFlowbite } from 'flowbite';
 
 @Component({
@@ -7,6 +8,7 @@ import { initFlowbite } from 'flowbite';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
+  constructor(public router: Router) {}
   title = 'ienecschool';
 
   ngOnInit(): void {
