@@ -6,7 +6,10 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "prettier": "./node_modules/.bin/prettier \"src/**/*.{ts,scss}\" --check"
   },
   "private": true,
   "dependencies": {
@@ -29,6 +32,8 @@
     "@angular/cli": "^16.2.12",
     "@angular/compiler-cli": "^16.2.0",
     "@types/jasmine": "~4.3.0",
+    "@typescript-eslint/eslint-plugin": "^7.4.0",
+    "@typescript-eslint/parser": "^7.4.0",
     "autoprefixer": "^10.4.19",
     "eslint": "^8.57.0",
     "eslint-plugin-import": "^2.29.1",
