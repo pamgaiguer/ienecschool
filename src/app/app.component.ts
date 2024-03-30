@@ -9,7 +9,7 @@ import { initFlowbite } from 'flowbite';
 })
 export class AppComponent implements OnInit {
   constructor(public router: Router) {}
-  title = 'ienecschool';
+  title = 'Colégio Ienec';
 
   ngOnInit(): void {
     initFlowbite();

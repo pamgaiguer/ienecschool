@@ -15,5 +15,5 @@ module.exports = {
       center: true,
     },
   },
-  plugins: [require("flowbite/plugin")],
+  plugins: [require("flowbite/plugin"), "prettier-plugin-tailwindcss"],
 };
