@@ -4,7 +4,7 @@ import { HomeComponent } from './home/home.component';
 import { SoonComponent } from './soon/soon.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'soon', pathMatch: 'full' },
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
   { path: 'soon', component: SoonComponent },
 ];
