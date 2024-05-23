@@ -7,6 +7,11 @@ import { HomeComponent } from './home/home.component';
 import { SoonComponent } from './soon/soon.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { FooterComponent } from './shared/footer/footer.component';
+import { CorpoDocenteComponent } from './corpo-docente/corpo-docente.component';
+import { GaleriaFotosComponent } from './galeria-fotos/galeria-fotos.component';
+import { AdmissaoComponent } from './admissao/admissao.component';
+import { ProgramaEscolarComponent } from './programa-escolar/programa-escolar.component';
+import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
 
 @NgModule({
   declarations: [
@@ -14,13 +19,15 @@ import { FooterComponent } from './shared/footer/footer.component';
     HomeComponent,
     SoonComponent,
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    CorpoDocenteComponent,
+    GaleriaFotosComponent,
+    AdmissaoComponent,
+    ProgramaEscolarComponent,
+    SobreNosComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
