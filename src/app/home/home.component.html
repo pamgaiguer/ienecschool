@@ -288,9 +288,17 @@
         </div>
         <div class="ml-4">
           <h2 class="text-lg font-bold">Telefone</h2>
-          <p class="text-gray-600">
-            (11) 2378-5045<br />(11) 96347-4183<br />(11) 98185-0273
-          </p>
+            <ul class="text-gray-500 dark:text-gray-400 font-medium">
+              <li class="mb-1">
+                <a class="hover:underline" href="tel:+551123785045">(11) 2378 5045</a>
+              </li>
+              <li class="mb-1">
+                <a class="hover:underline" href="tel:+5511981850475">(11) 98185 0475</a>
+              </li>
+              <li class="mb-1">
+                <a class="hover:underline" href="tel:+5511981850273">(11) 98185 0273</a>
+              </li>
+            </ul>
         </div>
       </div>
 
@@ -311,7 +319,11 @@
         </div>
         <div class="ml-4">
           <h2 class="text-lg font-bold">Email</h2>
-          <p class="text-gray-600">contato&#64;colegioienec.com.br</p>
+          <p class="text-gray-600 hover:underline">
+            <a href="mailto:{{'contato@colegioienec.com'}}" target="_blank"
+              >{{contactEmail}}</a
+            >
+          </p>
         </div>
       </div>
     </div>
@@ -343,7 +355,7 @@
           <label for="message" class="block text-gray-700">Sua Mensagem</label>
           <textarea
             id="message"
-            class="mt-1 block w-full px-4 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-200 focus:ring-opacity-50"></textarea>
+            class=" resize-none mt-1 block w-full px-4 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-200 focus:ring-opacity-50"></textarea>
         </div>
         <button
           type="submit"
