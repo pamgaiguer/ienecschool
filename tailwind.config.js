@@ -7,6 +7,8 @@ module.exports = {
       colors: {
         main: '#002455',
         btn: '#003D90',
+        mainFontColor: '#1F2A37',
+        primaryMainGrey: '#637381',
       },
       fontFamily: {
         'inter-regular': ['Inter', 'sans-serif'],
