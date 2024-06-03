@@ -9,7 +9,8 @@
     "test": "ng test",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "prettier": "./node_modules/.bin/prettier \"src/**/*.{ts,scss}\" --check"
+    "prettier": "./node_modules/.bin/prettier \"src/**/*.{ts,scss}\" --check",
+    "prettierw": "./node_modules/.bin/prettier \"src/**/*.{ts,scss}\" --write"
   },
   "private": true,
   "dependencies": {
