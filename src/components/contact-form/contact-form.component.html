@@ -1,0 +1,101 @@
+<section class="container mx-auto p-4 bg-contact-img">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-4">
+    <div>
+      <p class="text-gray-400 mb-2">Saiba mais</p>
+      <h1 class="text-4xl font-bold mb-8">Entre em contato!</h1>
+
+      <div class="flex items-start mb-6">
+        <div class="bg-white pt-3 pr-3 pb-3">
+          <img
+            src="../../assets/contact-address.png"
+            srcset="../../assets/contact-address.png@2x.png 2x"
+            alt="contact address" />
+        </div>
+        <div class="ml-4">
+          <h2 class="text-lg font-bold">Endereço</h2>
+          <p class="text-gray-600">
+            Rua Doutor Euclídes Ferreira da Silva, 55 - Estância dos Reis<br />Mogi das
+            Cruzes - SP, 08790-140, Brasil
+          </p>
+        </div>
+      </div>
+
+      <div class="flex items-start mb-6">
+        <div class="bg-white pt-3 pr-3 pb-3">
+          <img
+            src="../../assets/contact-phone.png"
+            srcset="../../assets/contact-phone.png@2x.png 2x"
+            alt="contact phone" />
+        </div>
+        <div class="ml-4">
+          <h2 class="text-lg font-bold">Telefone</h2>
+          <ul class="text-gray-500 dark:text-gray-400 font-medium">
+            <li class="mb-1">
+              <a class="hover:underline" href="tel:+551123785045">(11) 2378 5045</a>
+            </li>
+            <li class="mb-1">
+              <a class="hover:underline" href="tel:+5511981850475">(11) 98185 0475</a>
+            </li>
+            <li class="mb-1">
+              <a class="hover:underline" href="tel:+5511981850273">(11) 98185 0273</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="flex items-start">
+        <div class="bg-white pt-3 pr-3 pb-3">
+          <img
+            src="../../assets/contact-mail.png"
+            srcset="../../assets/contact-mail.png@2x.png 2x"
+            alt="contact mail" />
+        </div>
+        <div class="ml-4">
+          <h2 class="text-lg font-bold">Email</h2>
+          <p class="text-gray-600 hover:underline">
+            <a href="mailto:{{ 'contato@colegioienec.com' }}" target="_blank">{{
+              contactEmail
+            }}</a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-white p-8 rounded shadow-lg">
+      <form>
+        <div class="mb-4">
+          <label for="name" class="block text-gray-700">Nome</label>
+          <input
+            type="text"
+            id="name"
+            class="mt-1 block w-full px-4 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-200 focus:ring-opacity-50" />
+        </div>
+        <div class="mb-4">
+          <label for="email" class="block text-gray-700">Email</label>
+          <input
+            type="email"
+            id="email"
+            class="mt-1 block w-full px-4 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-200 focus:ring-opacity-50" />
+        </div>
+        <div class="mb-4">
+          <label for="phone" class="block text-gray-700">Telefone</label>
+          <input
+            type="tel"
+            id="phone"
+            class="mt-1 block w-full px-4 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-200 focus:ring-opacity-50" />
+        </div>
+        <div class="mb-4">
+          <label for="message" class="block text-gray-700">Sua Mensagem</label>
+          <textarea
+            id="message"
+            class="resize-none mt-1 block w-full px-4 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-200 focus:ring-opacity-50"></textarea>
+        </div>
+        <button
+          type="submit"
+          class="w-full px-4 py-2 bg-[#9CA3AF] text-white font-semibold rounded-md hover:bg-[#ced4da] focus:outline-none focus:ring focus:ring-blue-200 focus:ring-opacity-50">
+          Enviar
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
