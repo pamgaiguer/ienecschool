@@ -9,6 +9,7 @@ module.exports = {
         btn: '#003D90',
         mainFontColor: '#1F2A37',
         primaryMainGrey: '#637381',
+        grayGray7: '#CED4DA',
       },
       fontFamily: {
         'inter-regular': ['Inter', 'sans-serif'],
