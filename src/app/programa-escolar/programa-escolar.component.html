@@ -4,34 +4,32 @@
 </div>
 
 <section class="container mx-auto">
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+  <div class="grid grid-cols-1 md:grid-cols-1 gap-2">
     <div class="">
-      <h2 class="text-xl font-bold mb-4">Elementary School</h2>
+      <h2 class="text-xl font-bold mb-4">Conheça quem faz acontecer</h2>
       <p class="text-gray-700">
-        Library and music, all of which are taught by specialist staff. Swimming lessons
-        also begin in Reception once a week at York Hall swimming baths, taught by
-        qualified swimming teachers.
+        Nossa equipe de professores experientes e dedicados, apaixonados pelo ensino e com
+        formação sólida, garante um aprendizado individualizado e de qualidade.
       </p>
-      <div class="bg-white rounded-lg shadow-md w-[370px] h-[344px]">
-        <h2 class="text-xl font-bold mt-10 pb-8 pr-10 pl-10 pt-20">Estrutura Completa</h2>
-        <p class="pb-10 pr-10 pl-10">
-          Ampla área verde, quadras poliesportivas, horta e parque infantil com casa de
-          bonecas em tamanho real garantem um ambiente acolhedor e propício para o
-          aprendizado e lazer.
-        </p>
-      </div>
-    </div>
-    <div class="p-6">
-      <h2 class="text-xl font-bold mb-4">Column 2</h2>
-      <img
-        src="../../assets/placeholder.png"
-        srcset="../../assets/placeholder@2x.png 2x"
-        alt="placeholder" />
     </div>
   </div>
 </section>
 <section class="container mx-auto mt-4">
-  <!-- call to action -->
+  <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+    <div
+      *ngFor="let card of cards"
+      class="px-4 py-2 shadow-lg w-[330px] h-[380px] flex flex-col justify-between">
+      <div class="h-56 bg-gray-400 flex items-center justify-center mb-4">
+        <p class="text-center">image to be defined</p>
+      </div>
+      <div class="text-left flex-grow flex flex-col justify-end">
+        <div class="font-bold text-2xl text-dark mb-3">{{ card.name }}</div>
+        <div class="text-sm text-primaryTextColor">{{ card.role }}</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="container mx-auto mt-8 mb-8">
   <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
     <div>
       <p class="text-mainFontColor">Veja mais da nossa infraestrutura</p>
@@ -50,245 +48,15 @@
   </div>
 </section>
 <section class="container mx-auto mt-4">
-  <h3 class="text-center font-normal pt-4">O que oferecemos</h3>
-  <h1 class="text-3xl font-bold text-center mb-2 uppercase">Nossos diferenciais</h1>
-  <h5 class="text-center font-light pb-8">
-    There are many variations of passages of Lorem Ipsum available
-    <br />
-    but the majority have suffered alteration in some form.
-  </h5>
-  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-    <div class="bg-white p-6 rounded-lg shadow-md">
-      <div class="w-[70px] h-[70px] bg-grayGray7 p-[17px] mb-8 rounded-lg">
-        <img
-          src="../../assets/home-icon-structure.png"
-          srcset="../../assets/home-icon-structure@2x.png 2x"
-          alt="" />
-      </div>
-      <h2 class="text-xl font-bold mb-4">Estrutura completa</h2>
-      <p class="text-gray-700">
-        Ampla área verde, quadras poliesportivas, horta e parque infantil com casa de
-        bonecas em tamanho real garantem um ambiente acolhedor e propício para o
-        aprendizado e lazer.
-      </p>
-    </div>
-    <div class="bg-white p-6 rounded-lg shadow-md">
-      <div class="w-[70px] h-[70px] bg-grayGray7 p-[17px] mb-8 rounded-lg">
-        <img
-          src="../../assets/home-icon-sport.png"
-          srcset="../../assets/home-icon-sport@2x.png 2x"
-          alt="" />
-      </div>
-      <h2 class="text-xl font-bold mb-4">Esporte e Saúde</h2>
-      <p class="text-gray-700">
-        Pioneiro em Cheerleading e Pom Dance na região, a escola oferece diversas opções
-        para a prática esportiva e o bem-estar dos alunos.
-      </p>
-    </div>
-    <div class="bg-white p-6 rounded-lg shadow-md">
-      <div class="w-[70px] h-[70px] bg-grayGray7 p-[17px] mb-8 rounded-lg">
-        <img
-          src="../../assets/home-icon-lab.png"
-          srcset="../../assets/home-icon-lab@2x.png 2x"
-          alt="" />
-      </div>
-      <h2 class="text-xl font-bold mb-4">Laboratório de exatas e biológicas</h2>
-      <p class="text-gray-700">
-        Laboratórios de exatas e biológicas equipados, plataforma Plurall para ensino
-        remoto/semipresencial e robótica com material da Zoom Education garantem uma
-        educação moderna e inovadora.
-      </p>
-    </div>
-    <div class="bg-white p-6 rounded-lg shadow-md">
-      <div class="w-[70px] h-[70px] bg-grayGray7 p-[17px] mb-8 rounded-lg">
-        <img
-          src="../../assets/home-icon-teaching.png"
-          srcset="../../assets/home-icon-teaching@2x.png 2x"
-          alt="" />
-      </div>
-      <h2 class="text-xl font-bold mb-4">Ensino de qualidade</h2>
-      <p class="text-gray-700">
-        Sistema Anglo de Ensino e Ienec + Inglês garantem uma formação sólida e completa,
-        preparando os alunos para os desafios do futuro.
-      </p>
-    </div>
-    <div class="bg-white p-6 rounded-lg shadow-md">
-      <div class="w-[70px] h-[70px] bg-grayGray7 p-[17px] mb-8 rounded-lg">
-        <img
-          src="../../assets/home-icon-plurall-platform.png"
-          srcset="../../assets/home-icon-plurall-platform@2x.png 2x"
-          alt="" />
-      </div>
-      <h2 class="text-xl font-bold mb-4">Plataforma Plural</h2>
-      <p class="text-gray-700">
-        Acesso à versão digital dos livros e apostilas, Estude onde e quando quiser, com a
-        opção de leitura offline.
-      </p>
-    </div>
-    <div class="bg-white p-6 rounded-lg shadow-md">
-      <div class="w-[70px] h-[70px] bg-grayGray7 p-[17px] mb-8 rounded-lg">
-        <img
-          src="../../assets/home-icon-cidadania.png"
-          srcset="../../assets/home-icon-cidadania@2x.png 2x"
-          alt="" />
-      </div>
-      <h2 class="text-xl font-bold mb-4">Cidadania e Responsabilidade</h2>
-      <p class="text-gray-700">
-        Projetos Sociais promovem a responsabilidade social e o engajamento com a
-        comunidade.
-      </p>
-    </div>
-  </div>
-</section>
-<section class="container mx-auto mt-4 text-mainFontColor">
-  <h3 class="text-center font-normal pt-4">Nosso Time</h3>
-  <h1 class="text-3xl font-bold text-center mb-2 uppercase text-mainFontColor">
-    Conheça quem faz acontecer
-  </h1>
-  <h5 class="text-center font-light pb-8 text-primaryMainGrey">
-    Nossa equipe de professores experientes e dedicados, apaixonados pelo ensino e com
-    formação <br />sólida, garante um aprendizado individualizado e de qualidade.
-  </h5>
-  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-    <div
-      class="relative flex flex-col min-w-0 break-words bg-gray-600 overflow-hidden hover:cursor-pointer w-full mb-6 rounded-lg hover:shadow-lg hover:-translate-y-1 transition-all duration-300 max-w-sm">
-      <img
-        alt="..."
-        src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=80"
-        class="w-full align-middle rounded-t-lg" />
-      <blockquote class="relative p-8 mb-4">
-        <svg
-          preserveAspectRatio="none"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 583 95"
-          class="absolute left-0 w-full block h-95-px -top-94-px"></svg>
-        <h4 class="text-xl font-bold text-white">Coris Ambady</h4>
-        <p class="text-md font-light mt-2 text-white">
-          Putting together a page has never been easier than matching together pre-made
-          components. From landing pages presentation to login areas, you can easily
-          customise and built your pages.
-        </p>
-      </blockquote>
-    </div>
-    <div
-      class="relative flex flex-col min-w-0 break-words bg-gray-600 overflow-hidden hover:cursor-pointer w-full mb-6 rounded-lg hover:shadow-lg hover:-translate-y-1 transition-all duration-300 max-w-sm">
-      <img
-        alt="..."
-        src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=80"
-        class="w-full align-middle rounded-t-lg" />
-      <blockquote class="relative p-8 mb-4">
-        <svg
-          preserveAspectRatio="none"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 583 95"
-          class="absolute left-0 w-full block h-95-px -top-94-px"></svg>
-        <h4 class="text-xl font-bold text-white">Coris Ambady</h4>
-        <p class="text-md font-light mt-2 text-white">
-          Putting together a page has never been easier than matching together pre-made
-          components. From landing pages presentation to login areas, you can easily
-          customise and built your pages.
-        </p>
-      </blockquote>
-    </div>
-    <div
-      class="relative flex flex-col min-w-0 break-words bg-gray-600 overflow-hidden hover:cursor-pointer w-full mb-6 rounded-lg hover:shadow-lg hover:-translate-y-1 transition-all duration-300 max-w-sm">
-      <img
-        alt="..."
-        src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=80"
-        class="w-full align-middle rounded-t-lg" />
-      <blockquote class="relative p-8 mb-4">
-        <svg
-          preserveAspectRatio="none"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 583 95"
-          class="absolute left-0 w-full block h-95-px -top-94-px"></svg>
-        <h4 class="text-xl font-bold text-white">Coris Ambady</h4>
-        <p class="text-md font-light mt-2 text-white">
-          Putting together a page has never been easier than matching together pre-made
-          components. From landing pages presentation to login areas, you can easily
-          customise and built your pages.
-        </p>
-      </blockquote>
-    </div>
-    <div
-      class="relative flex flex-col min-w-0 break-words bg-gray-600 overflow-hidden hover:cursor-pointer w-full mb-6 rounded-lg hover:shadow-lg hover:-translate-y-1 transition-all duration-300 max-w-sm">
-      <img
-        alt="..."
-        src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=80"
-        class="w-full align-middle rounded-t-lg" />
-      <blockquote class="relative p-8 mb-4">
-        <svg
-          preserveAspectRatio="none"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 583 95"
-          class="absolute left-0 w-full block h-95-px -top-94-px"></svg>
-        <h4 class="text-xl font-bold text-white">Coris Ambady</h4>
-        <p class="text-md font-light mt-2 text-white">
-          Putting together a page has never been easier than matching together pre-made
-          components. From landing pages presentation to login areas, you can easily
-          customise and built your pages.
-        </p>
-      </blockquote>
-    </div>
-  </div>
-</section>
-<section class="container mx-auto">
-  <div class="flex justify-center items-center mt-4">
-    <button
-      class="bg-blue-500 text-white font-bold py-2 px-4 rounded hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400">
-      Veja o time todo!
-    </button>
-  </div>
-</section>
-<section class="container mx-auto">
-  <div class="flex justify-center items-center mt-4">
-    <div class="p-8 rounded flex items-start space-x-8">
-      <div class="flex flex-col justify-between max-w-lg">
-        <div>
-          <p class="text-gray-700 italic mb-4">
-            Estudei lá da 6ª série ao 2º ano do médio. Professores excelentes,
-            funcionários simpáticos e dedicados, e diretora e coordenadora maravilhosas. O
-            método de ensino é ótimo, mas a estrutura precisa melhorar um pouco. Recomendo
-            muito!
-          </p>
-          <p class="font-bold text-gray-900">Keiko W</p>
-          <p class="text-gray-600 mb-6">Ex-Aluna</p>
-        </div>
-        <!-- Navigation Buttons -->
-        <div class="flex space-x-4">
-          <button
-            class="bg-white text-gray-500 border border-gray-300 rounded-full p-2 hover:bg-gray-100 focus:outline-none">
-            <svg
-              class="h-6 w-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg">
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M15 19l-7-7 7-7"></path>
-            </svg>
-          </button>
-          <button
-            class="bg-white text-gray-500 border border-gray-300 rounded-full p-2 hover:bg-gray-100 focus:outline-none">
-            <svg
-              class="h-6 w-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg">
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M9 5l7 7-7 7"></path>
-            </svg>
-          </button>
-        </div>
+  <div class="max-w-7xl mx-auto">
+    <h2 class="text-3xl font-bold mb-8">Perguntas Frequentes</h2>
+    <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      <div *ngFor="let faq of faqs" class="border p-4 rounded shadow">
+        <h3 class="font-bold mb-2">{{ faq.title }}</h3>
+        <p class="text-gray-600">{{ faq.description }}</p>
       </div>
     </div>
   </div>
 </section>
+
 <app-contact-form></app-contact-form>
