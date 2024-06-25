@@ -8,10 +8,10 @@ import { HomeComponent } from './home/home.component';
 import { SoonComponent } from './soon/soon.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { FooterComponent } from './shared/footer/footer.component';
-import { CorpoDocenteComponent } from './corpo-docente/corpo-docente.component';
+import { SegmentosEnsinoComponent } from './segmentos-ensino/segmentos-ensino.component';
 import { GaleriaFotosComponent } from './galeria-fotos/galeria-fotos.component';
 import { AdmissaoComponent } from './admissao/admissao.component';
-import { ProgramaEscolarComponent } from './programa-escolar/programa-escolar.component';
+import { DiferenciaisComponent } from './diferenciais/diferenciais.component';
 import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
 
 @NgModule({
@@ -21,10 +21,10 @@ import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
     SoonComponent,
     NavbarComponent,
     FooterComponent,
-    CorpoDocenteComponent,
+    SegmentosEnsinoComponent,
     GaleriaFotosComponent,
     AdmissaoComponent,
-    ProgramaEscolarComponent,
+    DiferenciaisComponent,
     SobreNosComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, ComponentsModule],

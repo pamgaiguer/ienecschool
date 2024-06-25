@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-corpo-docente',
-  templateUrl: './corpo-docente.component.html',
-  styleUrls: ['./corpo-docente.component.scss'],
+  selector: 'app-segmentos-ensino',
+  templateUrl: './segmentos-ensino.component.html',
+  styleUrls: ['./segmentos-ensino.component.scss'],
 })
-export class CorpoDocenteComponent {
+export class SegmentosEnsinoComponent {
   cards = [
     { name: 'Coriss Ambady', role: 'Diretora' },
     { name: 'Glorius Cristian', role: 'Atendimento' },

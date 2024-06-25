@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-programa-escolar',
-  templateUrl: './programa-escolar.component.html',
-  styleUrls: ['./programa-escolar.component.scss'],
+  selector: 'app-diferenciais',
+  templateUrl: './diferenciais.component.html',
+  styleUrls: ['./diferenciais.component.scss'],
 })
-export class ProgramaEscolarComponent {
+export class DiferenciaisComponent {
   cards = [
     {
       name: 'Registro',
