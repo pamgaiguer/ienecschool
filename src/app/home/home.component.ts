@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { DiferenciaisService } from '../../services/diferenciais.service';
+import { DataService } from '../../services/data.service';
 
 @Component({
   selector: 'app-home',
@@ -8,12 +8,17 @@ import { DiferenciaisService } from '../../services/diferenciais.service';
 })
 export class HomeComponent implements OnInit {
   diferenciaisItens: any[] = [];
+  segmentosItens: any[] = [];
 
-  constructor(private dataService: DiferenciaisService) {}
+  constructor(private dataService: DataService) {}
 
   ngOnInit(): void {
     this.dataService.getDiferenciais().subscribe(data => {
       this.diferenciaisItens = data;
+    });
+
+    this.dataService.getSegmentosEnsino().subscribe(data => {
+      this.segmentosItens = data;
     });
   }
 

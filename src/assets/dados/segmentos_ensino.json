@@ -1,0 +1,24 @@
+[
+  {
+    "imgSrc": "../../assets/fotos/segmentos-infantil.jpg",
+    "title": "Educação Infantil",
+    "link": "#"
+  },
+
+  {
+    "imgSrc": "../../assets/fotos/segmentos-fundamental-I.jpg",
+    "title": "Ensino Fundamental I",
+    "link": "#"
+  },
+  {
+    "imgSrc": "../../assets/fotos/segmentos-fundamental-II.jpg",
+    "title": "Ensino Fundamental II",
+    "link": "#"
+  },
+
+  {
+    "imgSrc": "../../assets/fotos/segmentos-ensinomedio.jpg",
+    "title": "Educação Médio",
+    "link": "#"
+  }
+]
