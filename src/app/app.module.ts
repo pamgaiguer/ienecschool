@@ -13,6 +13,7 @@ import { GaleriaFotosComponent } from './galeria-fotos/galeria-fotos.component';
 import { AdmissaoComponent } from './admissao/admissao.component';
 import { DiferenciaisComponent } from './diferenciais/diferenciais.component';
 import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,7 @@ import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
     DiferenciaisComponent,
     SobreNosComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, ComponentsModule],
+  imports: [BrowserModule, HttpClientModule, AppRoutingModule, ComponentsModule],
   providers: [],
   bootstrap: [AppComponent],
 })

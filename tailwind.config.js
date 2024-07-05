@@ -12,6 +12,9 @@ module.exports = {
         primaryMainGrey: '#637381',
         grayGray7: '#CED4DA',
         primaryTextColor: '#637381',
+        blueDefault: '#003D90',
+        redDefault: '#EB0006',
+        yellowDefault: '#FEC401',
       },
       fontFamily: {
         'inter-regular': ['Inter', 'sans-serif'],

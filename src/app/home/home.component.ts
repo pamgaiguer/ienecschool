@@ -1,11 +1,22 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { DiferenciaisService } from '../../services/diferenciais.service';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit {
+  diferenciaisItens: any[] = [];
+
+  constructor(private dataService: DiferenciaisService) {}
+
+  ngOnInit(): void {
+    this.dataService.getDiferenciais().subscribe(data => {
+      this.diferenciaisItens = data;
+    });
+  }
+
   carouselImages: string[] = [
     'assets/fotos/galeria-colegio.jpg',
     'assets/fotos/galeria-ensino-medio-1.jpg',
