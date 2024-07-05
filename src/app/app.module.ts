@@ -13,23 +13,19 @@ import { GaleriaFotosComponent } from './galeria-fotos/galeria-fotos.component';
 import { AdmissaoComponent } from './admissao/admissao.component';
 import { DiferenciaisComponent } from './diferenciais/diferenciais.component';
 import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
-import { HttpClientModule } from '@angular/common/http';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 
-@NgModule({
-  declarations: [
-    AppComponent,
-    HomeComponent,
-    SoonComponent,
-    NavbarComponent,
-    FooterComponent,
-    SegmentosEnsinoComponent,
-    GaleriaFotosComponent,
-    AdmissaoComponent,
-    DiferenciaisComponent,
-    SobreNosComponent,
-  ],
-  imports: [BrowserModule, HttpClientModule, AppRoutingModule, ComponentsModule],
-  providers: [],
-  bootstrap: [AppComponent],
-})
+@NgModule({ declarations: [
+        AppComponent,
+        HomeComponent,
+        SoonComponent,
+        NavbarComponent,
+        FooterComponent,
+        SegmentosEnsinoComponent,
+        GaleriaFotosComponent,
+        AdmissaoComponent,
+        DiferenciaisComponent,
+        SobreNosComponent,
+    ],
+    bootstrap: [AppComponent], imports: [BrowserModule, AppRoutingModule, ComponentsModule], providers: [provideHttpClient(withInterceptorsFromDi())] })
 export class AppModule {}
