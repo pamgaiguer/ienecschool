@@ -44,4 +44,12 @@ export class HomeComponent implements OnInit {
     'assets/fotos/galeria-lobato2.jpg',
     'assets/fotos/galeria-lobato3.jpg',
   ];
+
+  partnerImages: any[] = [
+    { src: 'assets/parceiros-ANGLO.png', alt: 'Anglo' },
+    { src: 'assets/parceiros-CAMBRIDGE.png', alt: 'Cambridge' },
+    { src: 'assets/parceiros-PLENO.png', alt: 'Pleno' },
+    { src: 'assets/parceiros-PLURAL.png', alt: 'Plural' },
+    { src: 'assets/parceiros-ZOOM.png', alt: 'Zoom' },
+  ];
 }

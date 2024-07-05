@@ -102,11 +102,13 @@
 </section>
 <section class="container mx-auto mt-4">
   <h1 class="text-3xl font-bold text-center mb-2 uppercase">Nossos diferenciais</h1>
-  <h5 class="text-center font-light pb-8">
-    There are many variations of passages of Lorem Ipsum available
-    <br />
-    but the majority have suffered alteration in some form.
-  </h5>
+  <div class="flex flex-wrap justify-center">
+    <ul class="flex space-x-4">
+      <li *ngFor="let image of partnerImages">
+        <img [src]="image.src" [alt]="image.alt" class="w-32 h-32 object-cover" />
+      </li>
+    </ul>
+  </div>
   <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
     <div *ngFor="let item of diferenciaisItens" class="bg-white p-6 rounded-lg shadow-md">
       <div class="w-[70px] h-[70px] bg-grayGray7 p-[17px] mb-8 rounded-lg">
@@ -137,63 +139,5 @@
     </div>
   </div>
 </section>
-<section class="container mx-auto">
-  <div class="flex justify-center items-center mt-4">
-    <button
-      class="bg-blue-500 text-white font-bold py-2 px-4 rounded hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400">
-      Veja o time todo!
-    </button>
-  </div>
-</section>
-<section class="container mx-auto">
-  <div class="flex justify-center items-center mt-4">
-    <div class="p-8 rounded flex items-start space-x-8">
-      <div class="flex flex-col justify-between max-w-lg">
-        <div>
-          <p class="text-gray-700 italic mb-4">
-            Estudei lá da 6ª série ao 2º ano do médio. Professores excelentes,
-            funcionários simpáticos e dedicados, e diretora e coordenadora maravilhosas. O
-            método de ensino é ótimo, mas a estrutura precisa melhorar um pouco. Recomendo
-            muito!
-          </p>
-          <p class="font-bold text-gray-900">Keiko W</p>
-          <p class="text-gray-600 mb-6">Ex-Aluna</p>
-        </div>
-        <!-- Navigation Buttons -->
-        <div class="flex space-x-4">
-          <button
-            class="bg-white text-gray-500 border border-gray-300 rounded-full p-2 hover:bg-gray-100 focus:outline-none">
-            <svg
-              class="h-6 w-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg">
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M15 19l-7-7 7-7"></path>
-            </svg>
-          </button>
-          <button
-            class="bg-white text-gray-500 border border-gray-300 rounded-full p-2 hover:bg-gray-100 focus:outline-none">
-            <svg
-              class="h-6 w-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg">
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M9 5l7 7-7 7"></path>
-            </svg>
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+
 <app-contact-form></app-contact-form>
