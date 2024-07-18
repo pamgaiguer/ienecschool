@@ -18,5 +18,9 @@ module.exports = {
       center: true,
     },
   },
-  plugins: [require('flowbite/plugin'), 'prettier-plugin-tailwindcss'],
+  plugins: [
+    require('flowbite/plugin'),
+    'prettier-plugin-tailwindcss',
+    require('@tailwindcss/typography'),
+  ],
 };
