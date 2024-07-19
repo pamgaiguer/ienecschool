@@ -8,27 +8,24 @@ import { HomeComponent } from './home/home.component';
 import { SoonComponent } from './soon/soon.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { FooterComponent } from './shared/footer/footer.component';
-import { CorpoDocenteComponent } from './corpo-docente/corpo-docente.component';
+import { SegmentosEnsinoComponent } from './segmentos-ensino/segmentos-ensino.component';
 import { GaleriaFotosComponent } from './galeria-fotos/galeria-fotos.component';
 import { AdmissaoComponent } from './admissao/admissao.component';
-import { ProgramaEscolarComponent } from './programa-escolar/programa-escolar.component';
+import { DiferenciaisComponent } from './diferenciais/diferenciais.component';
 import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 
-@NgModule({
-  declarations: [
-    AppComponent,
-    HomeComponent,
-    SoonComponent,
-    NavbarComponent,
-    FooterComponent,
-    CorpoDocenteComponent,
-    GaleriaFotosComponent,
-    AdmissaoComponent,
-    ProgramaEscolarComponent,
-    SobreNosComponent,
-  ],
-  imports: [BrowserModule, AppRoutingModule, ComponentsModule],
-  providers: [],
-  bootstrap: [AppComponent],
-})
+@NgModule({ declarations: [
+        AppComponent,
+        HomeComponent,
+        SoonComponent,
+        NavbarComponent,
+        FooterComponent,
+        SegmentosEnsinoComponent,
+        GaleriaFotosComponent,
+        AdmissaoComponent,
+        DiferenciaisComponent,
+        SobreNosComponent,
+    ],
+    bootstrap: [AppComponent], imports: [BrowserModule, AppRoutingModule, ComponentsModule], providers: [provideHttpClient(withInterceptorsFromDi())] })
 export class AppModule {}

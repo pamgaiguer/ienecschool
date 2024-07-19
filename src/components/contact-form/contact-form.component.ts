@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./contact-form.component.scss'],
 })
 export class ContactFormComponent {
-  contactEmail = 'contato@colegioienec.com';
+  atendimentoEmail = 'atendimento@colegioienec.com';
+  relacionamentoEmail = 'relacionamento@colegioienec.com';
 }

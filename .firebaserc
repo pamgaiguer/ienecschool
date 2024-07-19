@@ -1,5 +1,9 @@
 {
   "projects": {
-    "default": "colegio-ienec"
-  }
+    "default": "colegio-ienec",
+    "dev": "dev-colegioienec"
+  },
+  "targets": {},
+  "etags": {},
+  "dataconnectEmulatorConfig": {}
 }
