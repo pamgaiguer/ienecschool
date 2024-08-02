@@ -9,8 +9,8 @@
     "test": "ng test",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "prettier": "./node_modules/.bin/prettier \"src/**/*.{ts,scss}\" --check",
-    "prettierw": "./node_modules/.bin/prettier \"src/**/*.{ts,scss}\" --write"
+    "prettier": "prettier \"src/**/*.{ts,scss}\" --check",
+    "prettierw": "prettier \"src/**/*.{ts,scss}\" --write"
   },
   "private": true,
   "dependencies": {
@@ -36,7 +36,7 @@
     "@typescript-eslint/eslint-plugin": "^7.15.0",
     "@typescript-eslint/parser": "^7.15.0",
     "autoprefixer": "^10.4.19",
-    "eslint": "^9.6.0",
+    "eslint": "^8.57.0",
     "eslint-plugin-import": "^2.29.1",
     "jasmine-core": "^5.1.2",
     "karma": "~6.4.0",
