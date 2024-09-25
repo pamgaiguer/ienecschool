@@ -1,9 +1,19 @@
 <section class="container mx-auto">
   <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-    <div class="">
-      <h2 class="text-xl font-bold mb-4">De gente para a Gente</h2>
+    <div>
+      <h2 class="text-4xl font-bold mt-20 mb-10 text-center">Quem somos</h2>
       <p class="text-gray-700">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Somos um Colégio de gente para gente, onde cada aluno é valorizado como parte
+        fundamental do dia a dia. Nossa missão é oferecer uma educação de excelência, com
+        foco no desenvolvimento integral dos estudantes, preparando-os para os desafios do
+        futuro.
+        <br />
+        <br />
+        Muito mais do que uma instituição de ensino; somos uma família. Cada aluno é único
+        e essencial para a construção de uma comunidade forte e unida. Juntos, estamos
+        empenhados em formar cidadãos conscientes, responsáveis e preparados para
+        transformar o mundo. <br /><br />
+        Venha fazer parte dessa jornada conosco!
       </p>
     </div>
     <div class="bg-white p-6 rounded-lg shadow-md">
@@ -80,11 +90,11 @@
     </div>
   </div>
 </section>
-<section class="container mx-auto mt-4">
+<section class="container mx-auto mt-24 mb-24">
   <!-- call to action -->
   <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
     <div>
-      <p class="text-mainFontColor">Veja mais da nossa infraestrutura</p>
+      <!-- <p class="text-mainFontColor">Veja mais da nossa infraestrutura</p> -->
       <h2 class="text-mainFontColor text-3xl font-bold mb-2">
         Veja nossas fotos, e venha <br />
         conhecer mais!
@@ -119,9 +129,13 @@
   </div>
 </section>
 <section class="container mx-auto mt-4 text-mainFontColor">
-  <h1 class="text-3xl font-bold text-center my-14 uppercase text-mainFontColor">
+  <h1 class="text-3xl font-bold text-center mt-14 mb-10 uppercase text-mainFontColor">
     Segmentos de Ensino
   </h1>
+  <h4 class="text-center my-10 text-mainFontColor">
+    No Colégio IENEC, oferecemos uma trajetória educacional completa que abrange desde a
+    Educação Infantil até o Ensino Médio.
+  </h4>
   <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
     <div
       *ngFor="let item of segmentosItens"
@@ -129,6 +143,7 @@
       <img [src]="item.imgSrc" class="w-full align-middle rounded-t-lg object-contain" />
       <blockquote class="relative p-8 mb-4">
         <h4 class="text-xl font-bold text-white">{{ item.title }}</h4>
+        <p class="text-md font-light mt-2 text-white">{{ item.description }}</p>
         <p class="text-md font-light mt-2 text-white">
           <a [href]="item.link" class="text-blue-500 text-center hover:text-blue-700"
             >Saiba mais</a

@@ -7,13 +7,13 @@
   },
   {
     "imgSrc": "../../assets/icones/parque-infantil.png",
-    "title": "Parque Infantil",
+    "title": "Espaço Infantil",
     "description": "Pioneiro em Cheerleading e Pom Dance na região, a escola oferece diversas opções para a prática esportiva e o bem-estar dos alunos.",
     "cor": "bg-redDefault"
   },
   {
     "imgSrc": "../../assets/icones/laboratorio.png",
-    "title": "Laboratório de exatas e biológicas",
+    "title": "Laboratório",
     "description": "Laboratórios de exatas e biológicas equipados, plataforma Plurall para ensino remoto/semipresencial e robótica com material da Zoom Education garantem uma educação moderna e inovadora.",
     "cor": "bg-yellowDefault"
   },
@@ -23,16 +23,17 @@
     "description": "Sistema Anglo de Ensino e Ienec + Inglês garantem uma formação sólida e completa, preparando os alunos para os desafios do futuro.",
     "cor": "bg-blueDefault"
   },
+
+  {
+    "imgSrc": "../../assets/icones/salas.png",
+    "title": "Salas Ambiente",
+    "description": "Projetos Sociais promovem a responsabilidade social e o engajamento com a comunidade.",
+    "cor": "bg-yellowDefault"
+  },
   {
     "imgSrc": "../../assets/icones/aulas-extras.png",
     "title": "Aulas extras",
     "description": "Judô, ballet, violino, futsal, vôlei, pomdance.",
     "cor": "bg-redDefault"
-  },
-  {
-    "imgSrc": "../../assets/icones/salas.png",
-    "title": "Salas de inglês, robótica e socioemocional",
-    "description": "Projetos Sociais promovem a responsabilidade social e o engajamento com a comunidade.",
-    "cor": "bg-yellowDefault"
   }
 ]
