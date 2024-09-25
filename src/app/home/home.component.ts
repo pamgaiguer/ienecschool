@@ -9,6 +9,7 @@ import { DataService } from '../../services/data.service';
 export class HomeComponent implements OnInit {
   diferenciaisItens: any[] = [];
   segmentosItens: any[] = [];
+  teste: any = [];
 
   constructor(private dataService: DataService) {}
 

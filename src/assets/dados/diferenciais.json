@@ -1,42 +1,36 @@
 [
   {
-    "imgSrc": "../../assets/home-icon-structure.png",
-    "imgSrcSet": "../../assets/home-icon-structure@2x.png 2x",
+    "imgSrc": "../../assets/icones/ginasio.png",
     "title": "Ginásio",
     "description": "Ampla área verde, quadras poliesportivas, horta e parque infantil com casa de bonecas em tamanho real garantem um ambiente acolhedor e propício para o aprendizado e lazer.",
     "cor": "bg-blueDefault"
   },
   {
-    "imgSrc": "../../assets/home-icon-sport.png",
-    "imgSrcSet": "../../assets/home-icon-sport@2x.png 2x",
+    "imgSrc": "../../assets/icones/parque-infantil.png",
     "title": "Parque Infantil",
     "description": "Pioneiro em Cheerleading e Pom Dance na região, a escola oferece diversas opções para a prática esportiva e o bem-estar dos alunos.",
     "cor": "bg-redDefault"
   },
   {
-    "imgSrc": "../../assets/home-icon-lab.png",
-    "imgSrcSet": "../../assets/home-icon-lab@2x.png 2x",
+    "imgSrc": "../../assets/icones/laboratorio.png",
     "title": "Laboratório de exatas e biológicas",
     "description": "Laboratórios de exatas e biológicas equipados, plataforma Plurall para ensino remoto/semipresencial e robótica com material da Zoom Education garantem uma educação moderna e inovadora.",
     "cor": "bg-yellowDefault"
   },
   {
-    "imgSrc": "../../assets/home-icon-teaching.png",
-    "imgSrcSet": "../../assets/home-icon-teaching@2x.png 2x",
+    "imgSrc": "../../assets/icones/espaco-amplo.png",
     "title": "Espaço Amplo",
     "description": "Sistema Anglo de Ensino e Ienec + Inglês garantem uma formação sólida e completa, preparando os alunos para os desafios do futuro.",
     "cor": "bg-blueDefault"
   },
   {
-    "imgSrc": "../../assets/home-icon-plurall-platform.png",
-    "imgSrcSet": "../../assets/home-icon-plurall-platform@2x.png 2x",
+    "imgSrc": "../../assets/icones/aulas-extras.png",
     "title": "Aulas extras",
     "description": "Judô, ballet, violino, futsal, vôlei, pomdance.",
     "cor": "bg-redDefault"
   },
   {
-    "imgSrc": "../../assets/home-icon-cidadania.png",
-    "imgSrcSet": "../../assets/home-icon-cidadania@2x.png 2x",
+    "imgSrc": "../../assets/icones/salas.png",
     "title": "Salas de inglês, robótica e socioemocional",
     "description": "Projetos Sociais promovem a responsabilidade social e o engajamento com a comunidade.",
     "cor": "bg-yellowDefault"
