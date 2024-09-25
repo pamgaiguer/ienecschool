@@ -1,6 +1,6 @@
 {
   "projects": {
-    "default": "colegio-ienec",
+    "default": "dev-colegioienec",
     "dev": "dev-colegioienec"
   },
   "targets": {},
