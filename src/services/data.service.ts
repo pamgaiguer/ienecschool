@@ -23,4 +23,8 @@ export class DataService {
   getMetodologiasEnsino(): Observable<any> {
     return this.http.get('../assets/dados/metodologia.json');
   }
+
+  getGaleriaFotos(): Observable<any> {
+    return this.http.get('../assets/dados/galeriaFotos.json');
+  }
 }
