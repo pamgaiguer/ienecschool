@@ -3,58 +3,37 @@
   <span class="text-center"> banner com fotos </span>
 </div>
 
-<section class="container mx-auto">
-  <div class="grid grid-cols-1 md:grid-cols-1 gap-2">
-    <div class="">
-      <h2 class="text-xl font-bold mb-4">Conheça quem faz acontecer</h2>
-      <p class="text-gray-700">
-        Nossa equipe de professores experientes e dedicados, apaixonados pelo ensino e com
-        formação sólida, garante um aprendizado individualizado e de qualidade.
-      </p>
-    </div>
-  </div>
+<section class="container mx-auto my-20">
+  <h2 class="text-4xl font-bold mt-20 mb-10 text-center">Nossos Diferenciais</h2>
+
+  <p class="text-gray-700">
+    Somos um Colégio de gente para gente, onde cada aluno é valorizado como parte
+    fundamental do dia a dia. Nossa missão é oferecer uma educação de excelência, com foco
+    no desenvolvimento integral dos estudantes, preparando-os para os desafios do futuro.
+    <br />
+    <br />
+    Muito mais do que uma instituição de ensino; somos uma família. Cada aluno é único e
+    essencial para a construção de uma comunidade forte e unida. Juntos, estamos
+    empenhados em formar cidadãos conscientes, responsáveis e preparados para transformar
+    o mundo.
+  </p>
+  <br />
+  <br />
+  <p class="text-center font-bold">Venha fazer parte dessa jornada conosco!</p>
 </section>
-<section class="container mx-auto mt-4">
-  <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-    <div
-      *ngFor="let card of cards"
-      class="px-4 py-2 shadow-lg w-[330px] h-[380px] flex flex-col justify-between">
-      <div class="h-56 bg-gray-400 flex items-center justify-center mb-4">
-        <p class="text-center">image to be defined</p>
-      </div>
-      <div class="text-left flex-grow flex flex-col justify-end">
-        <div class="font-bold text-2xl text-dark mb-3">{{ card.name }}</div>
-        <div class="text-sm text-primaryTextColor">{{ card.role }}</div>
-      </div>
+<section class="container mx-auto my-20">
+  <div
+    *ngFor="let item of diferenciaisItens"
+    class="bg-white p-6 rounded-lg shadow-md flex flex-row items-center mb-10">
+    <!-- Imagem à esquerda -->
+    <div class="w-24 h-24 mr-8 rounded-lg flex items-center justify-center">
+      <img [src]="item.imgSrc" alt="icons" class="max-w-full max-h-full" />
     </div>
-  </div>
-</section>
-<section class="container mx-auto mt-8 mb-8">
-  <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-    <div>
-      <p class="text-mainFontColor">Veja mais da nossa infraestrutura</p>
-      <h2 class="text-mainFontColor text-3xl font-bold mb-2">
-        Veja nossas fotos, e venha <br />
-        conhecer mais!
-      </h2>
-    </div>
-    <div></div>
-    <div>
-      <a
-        class="w-full px-4 py-2 bg-[#9CA3AF] text-white font-semibold rounded-md hover:bg-[#ced4da] hover:cursor-pointer focus:outline-none focus:ring focus:ring-blue-200 focus:ring-opacity-50">
-        <button class="mt-10 mx-8">Ver galeria</button>
-      </a>
-    </div>
-  </div>
-</section>
-<section class="container mx-auto mt-4">
-  <div class="max-w-7xl mx-auto">
-    <h2 class="text-3xl font-bold mb-8">Perguntas Frequentes</h2>
-    <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-      <div *ngFor="let faq of faqs" class="border p-4 rounded shadow">
-        <h3 class="font-bold mb-2">{{ faq.title }}</h3>
-        <p class="text-gray-600">{{ faq.description }}</p>
-      </div>
+
+    <!-- Texto à direita -->
+    <div class="flex flex-col">
+      <h2 class="text-left text-xl font-bold mb-4">{{ item.title }}</h2>
+      <p class="text-gray-700 text-left">{{ item.description }}</p>
     </div>
   </div>
 </section>

@@ -12,6 +12,10 @@ export class DataService {
     return this.http.get('../assets/dados/diferenciais.json');
   }
 
+  getFullDiferenciais(): Observable<any> {
+    return this.http.get('../assets/dados/fullDiferenciais.json');
+  }
+
   getSegmentosEnsino(): Observable<any> {
     return this.http.get('../assets/dados/segmentos_ensino.json');
   }
