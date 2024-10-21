@@ -1,30 +1,30 @@
 [
-  { "src": "../assets/fotos/galeria-colegio.jpg", "descricao": "lorem ipsum" },
+  { "src": "assets/fotos/galeria-colegio.jpg", "descricao": "lorem ipsum" },
   {
-    "src": "../assets/fotos/galeria-ensino-medio-1.jpg",
+    "src": "assets/fotos/galeria-ensino-medio-1.jpg",
     "descricao": "lorem ipsum"
   },
   {
-    "src": "../assets/fotos/galeria-ensino-medio-2.jpg",
+    "src": "assets/fotos/galeria-ensino-medio-2.jpg",
     "descricao": "lorem ipsum"
   },
   {
-    "src": "../assets/fotos/galeria-ensino-medio-3.jpg",
+    "src": "assets/fotos/galeria-ensino-medio-3.jpg",
     "descricao": "lorem ipsum"
   },
-  { "src": "../assets/fotos/galeria-fundI-1.jpg", "descricao": "lorem ipsum" },
-  { "src": "../assets/fotos/galeria-fundI-2.jpg", "descricao": "lorem ipsum" },
-  { "src": "../assets/fotos/galeria-fundI-3.jpg", "descricao": "lorem ipsum" },
-  { "src": "../assets/fotos/galeria-fundI-4.jpg", "descricao": "lorem ipsum" },
-  { "src": "../assets/fotos/galeria-fundII-1.jpg", "descricao": "lorem ipsum" },
-  { "src": "../assets/fotos/galeria-fundII-2.jpg", "descricao": "lorem ipsum" },
-  { "src": "../assets/fotos/galeria-fundII-3.jpg", "descricao": "lorem ipsum" },
-  { "src": "../assets/fotos/galeria-fundII-4.jpg", "descricao": "lorem ipsum" },
-  { "src": "../assets/fotos/galeria-fundII-5.jpg", "descricao": "lorem ipsum" },
-  { "src": "../assets/fotos/galeria-fundII-6.jpg", "descricao": "lorem ipsum" },
-  { "src": "../assets/fotos/galeria-infantil-1.jpg", "descricao": "lorem ipsum" },
-  { "src": "../assets/fotos/galeria-infantil-2.jpg", "descricao": "lorem ipsum" },
-  { "src": "../assets/fotos/galeria-infantil-3.jpg", "descricao": "lorem ipsum" },
-  { "src": "../assets/fotos/galeria-lobato2.jpg", "descricao": "lorem ipsum" },
-  { "src": "../assets/fotos/galeria-lobato3.jpg", "descricao": "lorem ipsum" }
+  { "src": "assets/fotos/galeria-fundI-1.jpg", "descricao": "lorem ipsum" },
+  { "src": "assets/fotos/galeria-fundI-2.jpg", "descricao": "lorem ipsum" },
+  { "src": "assets/fotos/galeria-fundI-3.jpg", "descricao": "lorem ipsum" },
+  { "src": "assets/fotos/galeria-fundI-4.jpg", "descricao": "lorem ipsum" },
+  { "src": "assets/fotos/galeria-fundII-1.jpg", "descricao": "lorem ipsum" },
+  { "src": "assets/fotos/galeria-fundII-2.jpg", "descricao": "lorem ipsum" },
+  { "src": "assets/fotos/galeria-fundII-3.jpg", "descricao": "lorem ipsum" },
+  { "src": "assets/fotos/galeria-fundII-4.jpg", "descricao": "lorem ipsum" },
+  { "src": "assets/fotos/galeria-fundII-5.jpg", "descricao": "lorem ipsum" },
+  { "src": "assets/fotos/galeria-fundII-6.jpg", "descricao": "lorem ipsum" },
+  { "src": "assets/fotos/galeria-infantil-1.jpg", "descricao": "lorem ipsum" },
+  { "src": "assets/fotos/galeria-infantil-2.jpg", "descricao": "lorem ipsum" },
+  { "src": "assets/fotos/galeria-infantil-3.jpg", "descricao": "lorem ipsum" },
+  { "src": "assets/fotos/galeria-lobato2.jpg", "descricao": "lorem ipsum" },
+  { "src": "assets/fotos/galeria-lobato3.jpg", "descricao": "lorem ipsum" }
 ]

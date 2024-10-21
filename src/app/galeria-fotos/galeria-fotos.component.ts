@@ -36,7 +36,6 @@ export class GaleriaFotosComponent implements OnInit {
   ngOnInit(): void {
     this.dataService.getGaleriaFotos().subscribe(data => {
       this.galeriaFotos = data;
-      console.log(this.galeriaFotos);
     });
   }
 }
