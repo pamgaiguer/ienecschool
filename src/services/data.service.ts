@@ -19,4 +19,8 @@ export class DataService {
   getSegmentosEnsino(): Observable<any> {
     return this.http.get('../assets/dados/segmentos_ensino.json');
   }
+
+  getMetodologiasEnsino(): Observable<any> {
+    return this.http.get('../assets/dados/metodologia.json');
+  }
 }

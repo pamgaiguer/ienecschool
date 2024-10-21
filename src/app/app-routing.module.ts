@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { SoonComponent } from './soon/soon.component';
 import { AdmissaoComponent } from './admissao/admissao.component';
-import { SegmentosEnsinoComponent } from './segmentos-ensino/segmentos-ensino.component';
+import { MetodologiaEnsinoComponent } from './metodologia-ensino/metodologia-ensino.component';
 import { DiferenciaisComponent } from './diferenciais/diferenciais.component';
 import { GaleriaFotosComponent } from './galeria-fotos/galeria-fotos.component';
 import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
@@ -13,7 +13,7 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'soon', component: SoonComponent },
   { path: 'matriculas', component: AdmissaoComponent },
-  { path: 'segmentos-ensino', component: SegmentosEnsinoComponent },
+  { path: 'metodologia', component: MetodologiaEnsinoComponent },
   { path: 'diferenciais', component: DiferenciaisComponent },
   { path: 'galeria', component: GaleriaFotosComponent },
   { path: 'admissao', component: AdmissaoComponent },
