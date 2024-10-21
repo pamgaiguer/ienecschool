@@ -7,24 +7,36 @@ import { DataService } from '../../services/data.service';
   styleUrls: ['./galeria-fotos.component.scss'],
 })
 export class GaleriaFotosComponent implements OnInit {
-  galeriaFotos: any[] = [];
-  isModalOpen = false;
-  modalImageSrc: string | undefined;
-
   constructor(private dataService: DataService) {}
 
-  openModal(imageSrc: string) {
-    this.modalImageSrc = imageSrc;
-    this.isModalOpen = true;
-  }
+  galeriaFotos: any[] = [];
 
-  closeModal() {
-    this.isModalOpen = false;
-  }
+  carouselImages: string[] = [
+    'assets/fotos/galeria-colegio.jpg',
+    'assets/fotos/galeria-ensino-medio-1.jpg',
+    'assets/fotos/galeria-ensino-medio-2.jpg',
+    'assets/fotos/galeria-ensino-medio-3.jpg',
+    'assets/fotos/galeria-fundI-1.jpg',
+    'assets/fotos/galeria-fundI-2.jpg',
+    'assets/fotos/galeria-fundI-3.jpg',
+    'assets/fotos/galeria-fundI-4.jpg',
+    'assets/fotos/galeria-fundII-1.jpg',
+    'assets/fotos/galeria-fundII-2.jpg',
+    'assets/fotos/galeria-fundII-3.jpg',
+    'assets/fotos/galeria-fundII-4.jpg',
+    'assets/fotos/galeria-fundII-5.jpg',
+    'assets/fotos/galeria-fundII-6.jpg',
+    'assets/fotos/galeria-infantil-1.jpg',
+    'assets/fotos/galeria-infantil-2.jpg',
+    'assets/fotos/galeria-infantil-3.jpg',
+    'assets/fotos/galeria-lobato2.jpg',
+    'assets/fotos/galeria-lobato3.jpg',
+  ];
 
   ngOnInit(): void {
     this.dataService.getGaleriaFotos().subscribe(data => {
       this.galeriaFotos = data;
+      console.log(this.galeriaFotos);
     });
   }
 }

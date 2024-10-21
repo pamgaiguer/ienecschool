@@ -16,7 +16,7 @@
   <p class="text-center font-bold">Venha fazer parte dessa jornada conosco!</p>
 </section>
 <section class="container mx-auto my-20">
-  <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+  <!-- <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
     <div
       *ngFor="let photo of galeriaFotos"
       class="px-4 py-2 shadow-lg flex flex-col justify-between mb-4">
@@ -29,14 +29,89 @@
         <div class="font-light text-xs text-dark mb-3">{{ photo.descricao }}</div>
       </div>
     </div>
-  </div>
+  </div> -->
 
   <!-- Modal -->
-  <div
-    class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-75"
+  <!-- <div
+    class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-75 transition-opacity duration-300 ease-in-out"
     *ngIf="isModalOpen"
-    (click)="closeModal()">
-    <img [src]="modalImageSrc" alt="" class="max-w-full max-h-full" />
+    (click)="closeModal()"
+    [ngClass]="{ 'opacity-100': isModalOpen, 'opacity-0': !isModalOpen }">
+    <div class="relative">
+      <img
+        [src]="galeriaFotos[currentIndex].src"
+        alt=""
+        class="max-w-full max-h-full transition-transform duration-300 ease-in-out" />
+      <button
+        class="absolute top-1/2 left-4 transform -translate-y-1/2 text-white"
+        (click)="prevImage($event)">
+        ←
+      </button>
+      <button
+        class="absolute top-1/2 right-4 transform -translate-y-1/2 text-white"
+        (click)="nextImage($event)">
+        →
+      </button>
+    </div>
+  </div> -->
+
+  <div id="default-carousel" class="relative w-full" data-carousel="slide">
+    <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
+      <div
+        *ngFor="let image of galeriaFotos; let i = index"
+        [class.hidden]="i !== 0"
+        class="duration-700 ease-in-out"
+        data-carousel-item>
+        <img
+          [src]="image"
+          class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+          alt="..." />
+      </div>
+    </div>
+    <div
+      class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
+      <button
+        *ngFor="let image of galeriaFotos; let i = index"
+        type="button"
+        class="w-3 h-3 rounded-full"
+        [attr.aria-current]="i === 0 ? 'true' : 'false'"
+        [attr.aria-label]="'Slide ' + (i + 1)"
+        [attr.data-carousel-slide-to]="i"></button>
+    </div>
+    <button
+      type="button"
+      class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+      data-carousel-prev>
+      <span
+        class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+        <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180">
+          <path
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M5 1 1 5l4 4" />
+        </svg>
+        <span class="sr-only">Previous</span>
+      </span>
+    </button>
+    <button
+      type="button"
+      class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+      data-carousel-next>
+      <span
+        class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+        <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180">
+          <path
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="m1 9 4-4-4-4" />
+        </svg>
+        <span class="sr-only">Next</span>
+      </span>
+    </button>
   </div>
 </section>
 
