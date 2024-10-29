@@ -50,12 +50,13 @@
     </div>
 
     <div class="bg-white p-8 rounded shadow-lg">
-      <form>
+      <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
         <div class="mb-4">
           <label for="name" class="block text-gray-700">Nome</label>
           <input
             type="text"
             id="name"
+            formControlName="name"
             class="mt-1 block w-full px-4 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-200 focus:ring-opacity-50" />
         </div>
         <div class="mb-4">
@@ -63,6 +64,7 @@
           <input
             type="email"
             id="email"
+            formControlName="email"
             class="mt-1 block w-full px-4 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-200 focus:ring-opacity-50" />
         </div>
         <div class="mb-4">
@@ -70,12 +72,14 @@
           <input
             type="tel"
             id="phone"
+            formControlName="phone"
             class="mt-1 block w-full px-4 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-200 focus:ring-opacity-50" />
         </div>
         <div class="mb-4">
           <label for="message" class="block text-gray-700">Sua Mensagem</label>
           <textarea
             id="message"
+            formControlName="message"
             class="resize-none mt-1 block w-full px-4 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-200 focus:ring-opacity-50"></textarea>
         </div>
         <button
