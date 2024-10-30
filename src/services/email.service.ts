@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class EmailService {
-  private apiUrl = 'https://us-central1-dev-colegioienec.cloudfunctions.net/sendEmail'; // URL da função
+  private apiUrl = 'https://us-central1-colegio-ienec.cloudfunctions.net/sendEmail'; // URL da função
 
   constructor(private http: HttpClient) {}
 
