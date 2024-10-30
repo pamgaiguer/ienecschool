@@ -19,7 +19,7 @@ jobs:
           node-version: '18.20.4' # Especifique a versão mínima requerida pelo Angular CLI
 
       - name: Install dependencies
-        run: npm install
+        run: npm install --legacy-peer-deps
 
       - name: Install Angular CLI
         run: npm install -g @angular/cli
