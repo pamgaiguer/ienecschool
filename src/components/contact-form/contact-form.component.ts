@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { EmailService } from '../../services/email.service';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-contact-form',
@@ -18,19 +18,27 @@ export class ContactFormComponent {
     private fb: FormBuilder,
   ) {
     this.contactForm = this.fb.group({
-      name: [''],
-      email: [''],
+      name: ['', Validators.required],
+      email: ['', [Validators.required, Validators.email]],
       phone: [''],
-      message: [''],
+      message: ['', Validators.required],
     });
   }
 
+  // onSubmit() {
+  //   if (this.contactForm.valid) {
+  //     this.emailService.sendEmail(this.contactForm.value).subscribe({
+  //       next: () => alert('Email enviado com sucesso!'),
+  //       error: () => alert('Erro ao enviar email. Tente novamente.'),
+  //     });
+  //   }
+  // }
+
   onSubmit() {
     if (this.contactForm.valid) {
-      this.emailService.sendEmail(this.contactForm.value).subscribe({
-        next: () => alert('Email enviado com sucesso!'),
-        error: () => alert('Erro ao enviar email. Tente novamente.'),
-      });
+      // Envie os dados do formulário para o servidor
+      console.log(this.contactForm.value);
+      // Aqui você chamaria a função para enviar o email
     }
   }
 }
