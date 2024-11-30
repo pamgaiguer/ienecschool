@@ -32,21 +32,31 @@
       <ul
         class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
         <li>
-          <!-- prettier-ignore-start -->
-          <a [routerLink]="['/home']">Home</a>
+          <a
+            [routerLink]="['/home']"
+            routerLinkActive="text-gray-500 font-bold border-b-2 border-gray-500"
+            [routerLinkActiveOptions]="{ exact: true }">
+            Home
+          </a>
         </li>
         <li>
-          <a [routerLink]="['/metodologia']">Metodologias de Ensino</a>
+          <a
+            [routerLink]="['/metodologia']"
+            routerLinkActive="text-gray-500 font-bold border-b-2 border-gray-500">
+            Metodologias de Ensino
+          </a>
         </li>
         <li>
-          <a [routerLink]="['/diferenciais']">Diferenciais</a>
+          <a [routerLink]="['/diferenciais']" routerLinkActive="text-gray-500 font-bold">
+            Diferenciais
+          </a>
         </li>
         <li>
-          <a [routerLink]="['/galeria']">Galeria de Fotos</a>
-        </li>
-        <li>
-          <!-- <a [routerLink]="['/admissao']">Matrículas!</a> -->
-          <!-- prettier-ignore-end -->
+          <a
+            [routerLink]="['/galeria']"
+            routerLinkActive="text-gray-500 font-bold border-b-2 border-gray-500">
+            Galeria de Fotos
+          </a>
         </li>
       </ul>
     </div>

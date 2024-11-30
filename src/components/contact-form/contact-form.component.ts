@@ -37,7 +37,7 @@ export class ContactFormComponent {
   onSubmit() {
     if (this.contactForm.valid) {
       // Envie os dados do formulário para o servidor
-      console.log(this.contactForm.value);
+      // console.log(this.contactForm.value);
       // Aqui você chamaria a função para enviar o email
     }
   }

@@ -1,9 +1,4 @@
-<div
-  class="relative isolate flex items-center bg-cover mt-4 mb-4 h-[295px] sm:px-3.5 sm:before:flex-1">
-  <img
-    src="../../assets//banners/banner-dezembro-matriculas.jpg"
-    alt="banner-matricula" />
-</div>
+<app-banner></app-banner>
 
 <section class="container mx-auto my-20">
   <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -115,13 +110,14 @@
 <section class="container mx-auto my-20">
   <h1 class="text-3xl font-bold text-center my-8 uppercase">Metodologias</h1>
   <div class="flex flex-wrap justify-center">
-    <ul class="flex space-x-4">
-      <li *ngFor="let image of partnerImages">
+    <ul class="flex flex-wrap justify-center space-x-4">
+      <li *ngFor="let image of partnerImages" class="mb-4 sm:mb-0">
         <img [src]="image.src" [alt]="image.alt" class="w-32 h-32 object-cover" />
       </li>
     </ul>
   </div>
 </section>
+
 <section class="container mx-auto mt-4 text-mainFontColor">
   <h1 class="text-3xl font-bold text-center mt-14 mb-10 uppercase text-mainFontColor">
     Segmentos de Ensino
