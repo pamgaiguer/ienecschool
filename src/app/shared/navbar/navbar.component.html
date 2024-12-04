@@ -1,6 +1,6 @@
-<nav class="border-gray-200 dark:bg-gray-900">
+<nav class="border border-gray-200">
   <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-    <a href="http://www.colegioienec.com" class="flex items-center">
+    <a [routerLink]="['/home']" class="flex items-center">
       <img
         src="/assets/logo.png"
         srcset="/assets/logo.png@2x.png 2x"
@@ -10,7 +10,7 @@
     <button
       data-collapse-toggle="navbar-default"
       type="button"
-      class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+      class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-mainFontColor rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
       aria-controls="navbar-default"
       aria-expanded="false">
       <span class="sr-only">Open main menu</span>
@@ -34,30 +34,32 @@
         <li>
           <a
             [routerLink]="['/home']"
-            routerLinkActive="text-gray-500 font-bold border-b-2 border-gray-500"
+            routerLinkActive="text-[#003D90] font-bold border-b-2 border-[#003D90]"
             [routerLinkActiveOptions]="{ exact: true }">
             Home
           </a>
         </li>
         <li>
           <a
-            [routerLink]="['/metodologia']"
-            routerLinkActive="text-gray-500 font-bold border-b-2 border-gray-500">
+            [routerLink]="['/metodologias']"
+            routerLinkActive="text-[#003D90] font-bold border-b-2 border-[#003D90]">
             Metodologias de Ensino
           </a>
         </li>
         <li>
-          <a [routerLink]="['/diferenciais']" routerLinkActive="text-gray-500 font-bold">
+          <a
+            [routerLink]="['/diferenciais']"
+            routerLinkActive="text-[#003D90] font-bold border-[#003D90]">
             Diferenciais
           </a>
         </li>
-        <li>
+        <!-- <li>
           <a
             [routerLink]="['/galeria']"
-            routerLinkActive="text-gray-500 font-bold border-b-2 border-gray-500">
+            routerLinkActive="text-[#003D90] font-bold border-b-2 border-[#003D90]">
             Galeria de Fotos
           </a>
-        </li>
+        </li> -->
       </ul>
     </div>
   </div>

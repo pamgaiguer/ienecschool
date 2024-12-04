@@ -13,7 +13,7 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'soon', component: SoonComponent },
   { path: 'matriculas', component: AdmissaoComponent },
-  { path: 'metodologia', component: MetodologiaEnsinoComponent },
+  { path: 'metodologias', component: MetodologiaEnsinoComponent },
   { path: 'diferenciais', component: DiferenciaisComponent },
   { path: 'galeria', component: GaleriaFotosComponent },
   { path: 'admissao', component: AdmissaoComponent },

@@ -47,10 +47,12 @@ export class HomeComponent implements OnInit {
   ];
 
   partnerImages: any[] = [
-    { src: 'assets/parceiros-ANGLO.png', alt: 'Anglo' },
-    { src: 'assets/parceiros-CAMBRIDGE.png', alt: 'Cambridge' },
-    { src: 'assets/parceiros-PLENO.png', alt: 'Pleno' },
-    { src: 'assets/parceiros-PLURAL.png', alt: 'Plural' },
-    { src: 'assets/parceiros-ZOOM.png', alt: 'Zoom' },
+    { src: 'assets/parceiros-001-ANGLO.png', alt: 'Anglo' },
+    { src: 'assets/parceiros-002-CAMBRIDGE.png', alt: 'Cambridge' },
+    { src: 'assets/parceiros-003-PLENO.png', alt: 'Pleno' },
+    { src: 'assets/parceiros-004-PLURAL.png', alt: 'Plural' },
+    { src: 'assets/parceiros-005-ZOOM.png', alt: 'Zoom' },
+    { src: 'assets/parceiros-006-clube-leitura.png', alt: 'Clube de Leitura' },
+    { src: 'assets/parceiros-007-ciranda-livro.png', alt: 'Ciranda do Livro' },
   ];
 }

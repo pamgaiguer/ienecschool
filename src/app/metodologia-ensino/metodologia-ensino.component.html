@@ -1,38 +1,23 @@
 <app-banner></app-banner>
 
 <section class="container mx-auto my-20">
-  <h2 class="text-4xl font-bold mt-20 mb-10 text-center">Metodologias de Ensino</h2>
-
-  <!-- <p class="text-gray-700">
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa laboriosam nam enim,
-    alias, perspiciatis ipsum fuga quia magni consequuntur deleniti itaque exercitationem
-    eum. Ut enim animi quasi voluptates nobis ab!
-  </p> -->
-  <br />
-  <br />
-  <p class="text-center font-bold">Venha fazer parte dessa jornada conosco!</p>
+  <h2 class="text-4xl font-bold mt-20 mb-10 text-center text-mainFontColor">
+    Metodologias de Ensino
+  </h2>
 </section>
 <section class="container mx-auto my-20">
   <div
     *ngFor="let item of metodologiaItens"
-    class="bg-white p-6 rounded-lg shadow-md flex flex-row items-center mb-10">
-    <!-- Imagem à esquerda -->
-    <div class="size-80 mr-8 rounded-lg flex items-center justify-center">
-      <img [src]="item.src" alt="icons" class="max-w-full max-h-full" />
+    class="bg-white p-6 rounded-lg shadow-md flex flex-row items-center mb-10 gap-8">
+    <!-- Contêiner da imagem com tamanho fixo -->
+    <div class="w-32 h-32 flex items-center justify-center rounded-full overflow-hidden">
+      <img [src]="item.src" alt="icons" class="w-full h-full object-cover" />
     </div>
 
-    <!-- Texto à direita -->
-    <div class="flex flex-col">
-      <h2 class="text-left text-xl font-bold mb-4">{{ item.title }}</h2>
-      <p class="text-gray-700 text-left">{{ item.description }}</p>
-      <div *ngIf="item.competencias && item.competencias.length > 0">
-        <br />
-        <ul>
-          <li *ngFor="let competencia of item.competencias">
-            <strong>{{ competencia.titulo }}:</strong> {{ competencia.descricao }}
-          </li>
-        </ul>
-      </div>
+    <!-- Texto alinhado verticalmente -->
+    <div class="flex-1">
+      <h2 class="text-xl font-semibold mb-2 text-mainFontColor">{{ item.title }}</h2>
+      <p class="text-mainFontColor">{{ item.description }}</p>
     </div>
   </div>
 </section>

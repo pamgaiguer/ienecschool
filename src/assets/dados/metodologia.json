@@ -1,16 +1,16 @@
 [
   {
-    "src": "../../assets/parceiros-ANGLO.png",
+    "src": "../../assets/parceiros-001-ANGLO.png",
     "title": "Anglo",
     "description": "A metodologia do Sistema Anglo é baseada em uma abordagem integral do ensino, que alia teoria e prática de maneira equilibrada. Os materiais didáticos são constantemente atualizados, oferecendo conteúdo relevante e alinhado com as exigências dos principais vestibulares e exames do país."
   },
   {
-    "src": "../../assets/parceiros-CAMBRIDGE.png",
+    "src": "../../assets/parceiros-002-CAMBRIDGE.png",
     "title": "Cambridge",
     "description": "Cambridge é referência global em avaliação e ensino de inglês. A parceria nos permite oferecer um currículo robusto e atualizado, focado no desenvolvimento das habilidades linguísticas necessárias para a comunicação eficaz em um mundo globalizado."
   },
   {
-    "src": "../../assets/parceiros-PLENO.png",
+    "src": "../../assets/parceiros-003-PLENO.png",
     "title": "Pleno",
     "description": "Acreditamos que a educação vai além do desenvolvimento acadêmico. Por isso, implementamos o Programa Pleno Socioemocional, uma iniciativa dedicada ao crescimento integral do ser humano, abrangendo aspectos emocionais, sociais e éticos. Os alunos que participam do Programa desenvolvem uma série de competências socioemocionais essenciais para a vida pessoal e profissional, incluindo:",
     "competencias": [
@@ -37,13 +37,23 @@
     ]
   },
   {
-    "src": "../../assets/parceiros-PLURAL.png",
+    "src": "../../assets/parceiros-004-PLURAL.png",
     "title": "Plurall",
     "description": "O Plurall é plataforma digital, que integra tecnologia e educação, oferecendo suporte contínuo aos alunos dentro e fora da sala de aula. Com acesso a qualquer hora e em qualquer lugar, o Plurall torna o aprendizado mais flexível e personalizado, permitindo que os estudantes avancem em seu próprio ritmo."
   },
   {
-    "src": "../../assets/parceiros-ZOOM.png",
+    "src": "../../assets/parceiros-005-ZOOM.png",
     "title": "Zoom Robótica",
     "description": "O programa Zoom Robótica é uma iniciativa que integra o ensino de robótica ao currículo escolar. Zoom Robótica é um programa educacional que utiliza kits de robótica e plataformas digitais para ensinar conceitos de ciência, tecnologia, engenharia e matemática (STEM) de maneira integrada e divertida. Através de atividades práticas e projetos colaborativos, os alunos têm a oportunidade de construir, programar e operar robôs, desenvolvendo habilidades essenciais para o século XXI.  "
+  },
+  {
+    "src": "../../assets/parceiros-006-clube-leitura.png",
+    "title": "Clube da Leitura",
+    "description": "Espaço de incentivo a leitura, argumentação, troca de experiências e criticidade, com ênfase em literatura, podcast, filmes, documentários, entre outros. Espaço de convivência pedagógica da educação infantil ao ensino médio."
+  },
+  {
+    "src": "../../assets/parceiros-007-ciranda-livro.png",
+    "title": "Ciranda do Livro",
+    "description": "Tem como objetivo central, incentivar a leitura e promover o hábito de compartilhar sonhos e conhecimentos. Fomenta a formação de novos leitores"
   }
 ]

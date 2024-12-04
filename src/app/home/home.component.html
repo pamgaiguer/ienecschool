@@ -4,7 +4,7 @@
   <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
     <div>
       <h2 class="text-4xl font-bold mt-20 mb-10 text-center">Quem somos</h2>
-      <p class="text-gray-700">
+      <p class="text-mainFontColor">
         Somos um Colégio de gente para gente, onde cada aluno é valorizado como parte
         fundamental do dia a dia. Nossa missão é oferecer uma educação de excelência, com
         foco no desenvolvimento integral dos estudantes, preparando-os para os desafios do
@@ -21,7 +21,7 @@
       <p class="text-center font-bold">Venha fazer parte dessa jornada conosco!</p>
     </div>
     <div class="bg-white p-6 rounded-lg shadow-md">
-      <h2 class="text-xl font-bold mb-4">Galeria de Fotos</h2>
+      <h2 class="text-xl font-bold mb-4 text-mainFontColor">Galeria de Fotos</h2>
       <div id="default-carousel" class="relative w-full" data-carousel="slide">
         <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
           <div
@@ -101,18 +101,25 @@
       <div class="w-24 h-24 mb-8 rounded-lg flex items-center justify-center">
         <img [src]="item.imgSrc" alt="icons" class="max-w-full max-h-full" />
       </div>
-      <h2 class="text-center text-xl font-bold mb-4">{{ item.title }}</h2>
-      <p class="text-gray-700 text-center">{{ item.description }}</p>
+      <h2 class="text-center text-xl font-bold mb-4 text-mainFontColor">
+        {{ item.title }}
+      </h2>
+      <p class="text-mainFontColor text-center">{{ item.description }}</p>
     </div>
   </div>
 </section>
 
 <section class="container mx-auto my-20">
-  <h1 class="text-3xl font-bold text-center my-8 uppercase">Metodologias</h1>
+  <h1 class="text-3xl font-bold text-center my-8 uppercase text-mainFontColor">
+    Metodologias
+  </h1>
   <div class="flex flex-wrap justify-center">
     <ul class="flex flex-wrap justify-center space-x-4">
       <li *ngFor="let image of partnerImages" class="mb-4 sm:mb-0">
-        <img [src]="image.src" [alt]="image.alt" class="w-32 h-32 object-cover" />
+        <img
+          [src]="image.src"
+          [alt]="image.alt"
+          class="w-32 h-32 object-cover shadow rounded-full" />
       </li>
     </ul>
   </div>
@@ -129,20 +136,17 @@
   <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
     <div
       *ngFor="let item of segmentosItens"
-      class="relative flex flex-col min-w-0 break-words bg-gray-600 overflow-hidden hover:cursor-pointer w-full mb-6 rounded-lg hover:shadow-lg hover:-translate-y-1 transition-all duration-300 max-w-sm">
+      class="relative flex flex-col min-w-0 break-words bg-white overflow-hidden shadow hover:cursor-pointer w-full mb-6 rounded-lg hover:shadow-lg max-w-sm">
       <img
         [src]="item.imgSrc"
         [srcset]="item.img2x"
         class="w-full align-middle rounded-t-lg object-contain" />
-      <blockquote class="relative p-8 mb-4">
-        <h4 class="text-xl font-bold text-white">{{ item.title }}</h4>
-        <p class="text-md font-extralight mt-2 text-white">{{ item.description }}</p>
-        <p class="text-md font-extrabold mt-2 text-white text-right">
-          <a [href]="item.link" class="text-white-500 hover:text-white-700">Saiba mais</a>
+      <blockquote class="relative p-8">
+        <h4 class="text-xl font-bold text-mainFontColor">{{ item.title }}</h4>
+        <p class="text-md font-light mt-2 text-mainFontColor">
+          {{ item.description }}
         </p>
       </blockquote>
     </div>
   </div>
 </section>
-
-<!-- <app-contact-form></app-contact-form> -->
