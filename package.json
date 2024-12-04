@@ -10,7 +10,8 @@
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "prettier": "./node_modules/.bin/prettier \"src/**/*.{ts,scss}\" --check",
-    "prettierw": "./node_modules/.bin/prettier \"src/**/*.{ts,scss}\" --write"
+    "prettierw": "./node_modules/.bin/prettier \"src/**/*.{ts,scss}\" --write",
+    "deploy:dev": "ng build && firebase deploy --only hosting"
   },
   "private": true,
   "dependencies": {
