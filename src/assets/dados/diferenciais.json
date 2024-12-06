@@ -2,13 +2,13 @@
   {
     "imgSrc": "../../assets/icones/ginasio.png",
     "title": "Ginásio",
-    "description": "Ampla área verde, quadras poliesportivas, horta e parque infantil com casa de bonecas em tamanho real garantem um ambiente acolhedor e propício para o aprendizado e lazer.",
+    "description": "Projetado para ser um espaço amplo e multifuncional, o ginásio do Colégio IENEC é um ambiente onde nossos alunos podem praticar esportes, participar de eventos e desenvolver habilidades físicas e sociais de maneira segura e estimulante.",
     "cor": "bg-blueDefault"
   },
   {
     "imgSrc": "../../assets/icones/parque-infantil.png",
     "title": "Espaço Infantil",
-    "description": "Pioneiro em Cheerleading e Pom Dance na região, a escola oferece diversas opções para a prática esportiva e o bem-estar dos alunos.",
+    "description": "Nosso espaço dedicado à Educação Infantil foi cuidadosamente planejado para garantir a segurança e o bem-estar das crianças. As salas de aula são amplas, com ventilação e iluminação natural e o espaço ao ar livre fomenta o desenvolvimento motor, social e emocional das crianças.",
     "cor": "bg-redDefault"
   },
   {
