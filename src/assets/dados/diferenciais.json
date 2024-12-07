@@ -2,38 +2,38 @@
   {
     "imgSrc": "../../assets/icones/ginasio.png",
     "title": "Ginásio",
-    "description": "Projetado para ser um espaço amplo e multifuncional, o ginásio do Colégio IENEC é um ambiente onde nossos alunos podem praticar esportes, participar de eventos e desenvolver habilidades físicas e sociais de maneira segura e estimulante.",
+    "description": "",
     "cor": "bg-blueDefault"
   },
   {
     "imgSrc": "../../assets/icones/parque-infantil.png",
     "title": "Espaço Infantil",
-    "description": "Nosso espaço dedicado à Educação Infantil foi cuidadosamente planejado para garantir a segurança e o bem-estar das crianças. As salas de aula são amplas, com ventilação e iluminação natural e o espaço ao ar livre fomenta o desenvolvimento motor, social e emocional das crianças.",
+    "description": "",
     "cor": "bg-redDefault"
   },
   {
     "imgSrc": "../../assets/icones/laboratorio.png",
     "title": "Laboratório",
-    "description": "Laboratórios de exatas e biológicas equipados, plataforma Plurall para ensino remoto/semipresencial e robótica com material da Zoom Education garantem uma educação moderna e inovadora.",
+    "description": "",
     "cor": "bg-yellowDefault"
   },
   {
     "imgSrc": "../../assets/icones/espaco-amplo.png",
     "title": "Espaço Amplo",
-    "description": "Sistema Anglo de Ensino e Ienec + Inglês garantem uma formação sólida e completa, preparando os alunos para os desafios do futuro.",
+    "description": "",
     "cor": "bg-blueDefault"
   },
 
   {
     "imgSrc": "../../assets/icones/salas.png",
     "title": "Salas Ambiente",
-    "description": "Projetos Sociais promovem a responsabilidade social e o engajamento com a comunidade.",
+    "description": "",
     "cor": "bg-yellowDefault"
   },
   {
     "imgSrc": "../../assets/icones/aulas-extras.png",
     "title": "Aulas extras",
-    "description": "Judô, ballet, violino, futsal, vôlei, pomdance.",
+    "description": "Judo, ballet e desenho",
     "cor": "bg-redDefault"
   }
 ]

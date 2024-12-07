@@ -20,9 +20,10 @@
   <div
     *ngFor="let item of diferenciaisItens"
     class="bg-white p-6 rounded-lg shadow-md flex flex-row items-center mb-10">
-    <!-- Imagem à esquerda -->
-    <div class="w-24 h-24 mr-8 rounded-lg flex items-center justify-center">
-      <img [src]="item.imgSrc" alt="icons" class="max-w-full max-h-full" />
+    <!-- Imagem circular à esquerda -->
+    <div
+      class="flex-shrink-0 w-24 h-24 mr-8 rounded-full overflow-hidden flex items-center justify-center">
+      <img [src]="item.imgSrc" alt="icons" class="w-24 h-24 object-cover" />
     </div>
 
     <!-- Texto à direita -->

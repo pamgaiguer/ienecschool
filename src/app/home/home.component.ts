@@ -45,6 +45,21 @@ export class HomeComponent implements OnInit {
     'assets/fotos/galeria-lobato2.jpg',
     'assets/fotos/galeria-lobato3.jpg',
   ];
+  currentSlideIndex: number = 0;
+
+  nextSlide(): void {
+    this.currentSlideIndex = (this.currentSlideIndex + 1) % this.carouselImages.length;
+  }
+
+  prevSlide(): void {
+    this.currentSlideIndex =
+      (this.currentSlideIndex - 1 + this.carouselImages.length) %
+      this.carouselImages.length;
+  }
+
+  goToSlide(index: number): void {
+    this.currentSlideIndex = index;
+  }
 
   partnerImages: any[] = [
     { src: 'assets/parceiros-001-ANGLO.png', alt: 'Anglo' },

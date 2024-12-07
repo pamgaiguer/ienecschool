@@ -28,5 +28,11 @@
     "title": "Salas Ambiente",
     "description": "As salas ambiente de, inglês, robótica, artes, socioemocional do Colégio IENEC são projetadas para oferecer uma experiência de aprendizado especializada e focada em diferentes áreas do conhecimento. Cada sala é cuidadosamente equipada com recursos específicos que atendem às necessidades de cada disciplina, criando um ambiente ideal para que os alunos possam explorar e aprofundar seus estudos de forma prática e dinâmica.",
     "cor": "bg-yellowDefault"
+  },
+  {
+    "imgSrc": "../../assets/icones/aulas-extras.png",
+    "title": "Aulas extras",
+    "description": "Ballet, judô e desenho.",
+    "cor": "bg-redDefault"
   }
 ]
