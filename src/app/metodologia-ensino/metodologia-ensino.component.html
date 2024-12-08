@@ -18,6 +18,14 @@
     <div class="flex-1">
       <h2 class="text-xl font-semibold mb-2 text-mainFontColor">{{ item.title }}</h2>
       <p class="text-mainFontColor">{{ item.description }}</p>
+      <div *ngIf="item.competencias && item.competencias.length > 0">
+        <br />
+        <ul>
+          <li *ngFor="let competencia of item.competencias">
+            <strong>{{ competencia.titulo }}:</strong> {{ competencia.descricao }}
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 </section>
