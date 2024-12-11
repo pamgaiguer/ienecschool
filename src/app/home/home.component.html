@@ -1,9 +1,11 @@
 <app-banner></app-banner>
 
-<section class="container mx-auto my-20">
+<section class="container mx-auto px-3 md:my-20 lg:my-20">
   <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
     <div>
-      <h2 class="text-4xl font-bold mt-20 mb-10 text-center">Quem somos</h2>
+      <h2 class="text-4xl font-bold mt-10 md:mt-20 lg:mt-20 mb-10 text-center">
+        Quem somos
+      </h2>
       <p class="text-mainFontColor">
         Somos um Colégio de gente para gente, onde cada aluno é valorizado como parte
         fundamental do dia a dia. Nossa missão é oferecer uma educação de excelência, com
@@ -21,10 +23,12 @@
       <p class="text-center font-bold">Venha fazer parte dessa jornada conosco!</p>
     </div>
     <div class="bg-white p-6 rounded-lg shadow-md">
-      <h2 class="text-xl font-bold mb-4 text-mainFontColor">Galeria de Fotos</h2>
+      <h2
+        class="text-center md:text-left lg:text-left text-xl font-bold mb-4 text-mainFontColor">
+        Galeria de Fotos
+      </h2>
 
       <div id="default-carousel" class="relative w-full" data-carousel="slide">
-        <!-- Carousel wrapper -->
         <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
           <div
             *ngFor="let image of carouselImages; let i = index"
@@ -40,7 +44,7 @@
 
         <!-- Slider indicators -->
         <div
-          class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
+          class="relative z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
           <button
             *ngFor="let image of carouselImages; let i = index"
             type="button"
@@ -152,8 +156,11 @@
         [srcset]="item.img2x"
         class="w-full align-middle rounded-t-lg object-contain" />
       <blockquote class="relative p-8">
-        <h4 class="text-xl font-bold text-mainFontColor">{{ item.title }}</h4>
-        <p class="text-md font-light mt-2 text-mainFontColor">
+        <h4
+          class="text-center text-2xl md:text-xl lg:text-xl font-bold text-mainFontColor">
+          {{ item.title }}
+        </h4>
+        <p class="text-center md:text-md lg:text-md font-light mt-2 text-mainFontColor">
           {{ item.description }}
         </p>
       </blockquote>
