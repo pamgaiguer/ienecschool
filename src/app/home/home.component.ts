@@ -42,7 +42,6 @@ export class HomeComponent implements OnInit {
     'assets/fotos/galeria-infantil-2.jpg',
     'assets/fotos/galeria-infantil-3.jpg',
     'assets/fotos/galeria-lobato2.jpg',
-    'assets/fotos/galeria-lobato3.jpg',
   ];
   currentSlideIndex: number = 0;
 

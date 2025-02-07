@@ -149,7 +149,9 @@
     <div
       *ngFor="let item of segmentosItens"
       class="relative flex flex-col min-w-0 break-words bg-white overflow-hidden shadow hover:cursor-pointer w-full mb-6 rounded-lg hover:shadow-lg max-w-sm">
-      <img [src]="item.imgSrc" class="w-full align-middle rounded-t-lg object-contain" />
+      <img
+        [src]="item.imgSrc"
+        class="w-[375px] h-[490px] align-middle rounded-t-lg object-contain" />
       <blockquote class="relative p-8">
         <h4
           class="text-center text-2xl md:text-xl lg:text-xl font-bold text-mainFontColor">
