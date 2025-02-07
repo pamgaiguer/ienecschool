@@ -1,27 +1,23 @@
 [
   {
     "imgSrc": "../../assets/fotos/segmentos-infantil.jpg",
-    "img2x": "../../assets/fotos/segmentos-infantil@2x.png",
     "title": "Educação Infantil",
     "description": "A Educação Infantil é o primeiro passo na jornada educacional. Valorizamos o aprendizado lúdico e significativo, promovendo o desenvolvimento cognitivo, social e emocional das crianças. Com um ambiente acolhedor e estimulante, as atividades são projetadas para despertar a curiosidade e a autonomia."
   },
 
   {
     "imgSrc": "../../assets/fotos/segmentos-fundamental-I.jpg",
-    "img2x": "../../assets/fotos/segmentos-fundamental-I@2x.png",
     "title": "Ensino Fundamental I",
     "description": "No Ensino Fundamental I, damos continuidade ao desenvolvimento das habilidades básicas, com ênfase na alfabetização, no pensamento crítico e na criatividade. Os professores são dedicados a proporcionar um ensino personalizado, respeitando o ritmo e as necessidades de cada aluno."
   },
   {
     "imgSrc": "../../assets/fotos/segmentos-fundamental-II.jpg",
-    "img2x": "../../assets/fotos/segmentos-fundamental-II@2x.png",
     "title": "Ensino Fundamental II",
     "description": "No Ensino Fundamental II, aprofundamos os conhecimentos adquiridos e estimulamos a autonomia e a responsabilidade. A abordagem pedagógica integra teoria e prática, promovendo um aprendizado significativo e contextualizado. Preparamos os estudantes para se tornarem cidadãos críticos e participativos, capazes de enfrentar os desafios do mundo contemporâneo."
   },
 
   {
     "imgSrc": "../../assets/fotos/segmentos-ensinomedio.jpg",
-    "img2x": "../../assets/fotos/segmentos-ensinomedio@2x.png",
     "title": "Ensino Médio",
     "description": "O Ensino Médio no Colégio IENEC é uma fase decisiva na preparação para o futuro acadêmico e profissional. Com um currículo robusto e diversificado, oferecemos uma educação de excelência que abrange todas as áreas do conhecimento. Os estudantes são incentivados a desenvolver suas habilidades e talentos, com foco no ingresso nas melhores universidades e na construção de carreiras promissoras."
   }
