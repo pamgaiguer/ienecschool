@@ -64,10 +64,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "ienecschool:build:production"
+              "buildTarget": "ienecschool:build:production"
             },
             "development": {
-              "browserTarget": "ienecschool:build:development"
+              "buildTarget": "ienecschool:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -75,7 +75,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "ienecschool:build"
+            "buildTarget": "ienecschool:build"
           }
         },
         "test": {

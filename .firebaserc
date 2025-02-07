@@ -1,7 +1,6 @@
 {
   "projects": {
-    "default": "colegioienec",
-    "dev": "colegioienec"
+    "default": "ienec-colegio"
   },
   "targets": {},
   "etags": {},
