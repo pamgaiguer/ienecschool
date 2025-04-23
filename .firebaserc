@@ -1,9 +1,0 @@
-{
-  "projects": {
-    "default": "ienec-colegio",
-    "prod": "ienec-colegio"
-  },
-  "targets": {},
-  "etags": {},
-  "dataconnectEmulatorConfig": {}
-}
