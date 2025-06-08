@@ -2,9 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { DataService } from '../../services/data.service';
 
 @Component({
-  selector: 'app-galeria-fotos',
-  templateUrl: './galeria-fotos.component.html',
-  styleUrls: ['./galeria-fotos.component.scss'],
+    selector: 'app-galeria-fotos',
+    templateUrl: './galeria-fotos.component.html',
+    styleUrls: ['./galeria-fotos.component.scss'],
+    standalone: false
 })
 export class GaleriaFotosComponent implements OnInit {
   constructor(private dataService: DataService) {}

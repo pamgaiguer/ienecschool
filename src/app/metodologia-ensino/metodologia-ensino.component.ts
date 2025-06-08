@@ -2,9 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { DataService } from '../../services/data.service';
 
 @Component({
-  selector: 'app-metodologia-ensino',
-  templateUrl: './metodologia-ensino.component.html',
-  styleUrls: ['./metodologia-ensino.component.scss'],
+    selector: 'app-metodologia-ensino',
+    templateUrl: './metodologia-ensino.component.html',
+    styleUrls: ['./metodologia-ensino.component.scss'],
+    standalone: false
 })
 export class MetodologiaEnsinoComponent implements OnInit {
   metodologiaItens: any[] = [];
