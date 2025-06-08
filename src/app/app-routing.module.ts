@@ -13,6 +13,12 @@ const routes: Routes = [
   { path: 'metodologias', component: MetodologiaEnsinoComponent },
   { path: 'diferenciais', component: DiferenciaisComponent },
   { path: 'admissao', component: AdmissaoComponent },
+  //rotas modulo admin
+  {
+    path: 'admin',
+    loadChildren: () =>
+      import('./admin/admin-routing.module').then(m => m.AdminRoutingModule),
+  },
 ];
 
 @NgModule({
