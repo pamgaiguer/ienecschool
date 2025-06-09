@@ -1,5 +1,13 @@
 <div class="main">
-  <app-navbar></app-navbar>
-  <router-outlet></router-outlet>
-  <app-footer></app-footer>
+  <ng-container *ngIf="!isLoginRoute(); else loginLayout">
+    <app-navbar></app-navbar>
+
+    <router-outlet></router-outlet>
+
+    <app-footer></app-footer>
+  </ng-container>
+
+  <ng-template #loginLayout>
+    <router-outlet></router-outlet>
+  </ng-template>
 </div>

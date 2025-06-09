@@ -1,24 +1,33 @@
-<div class="min-h-screen flex items-center justify-center bg-gray-100">
-  <form (ngSubmit)="onSubmit()" class="bg-white p-6 rounded shadow-md w-full max-w-sm">
-    <h2 class="text-2xl font-bold mb-4">Login do Admin</h2>
+<div class="min-h-screen flex">
+  <!-- Lado esquerdo: imagem, cor ou logo -->
+  <div class="hidden md:flex w-1/2 bg-blue-600 items-center justify-center text-white">
+    <h1 class="text-4xl font-bold">Foto Admin</h1>
+    <!-- Ou coloca uma imagem aqui -->
+  </div>
 
-    <div class="mb-4">
-      <label class="block text-sm font-medium mb-1">Login</label>
-      <input [(ngModel)]="login" name="login" class="w-full border border-gray-300 rounded p-2" required />
-    </div>
+  <!-- Lado direito: formulário -->
+  <div class="flex w-full md:w-1/2 items-center justify-center bg-gray-50">
+    <form (ngSubmit)="onSubmit()" class="w-full max-w-sm p-6 bg-white shadow-md rounded">
+      <h2 class="text-2xl font-semibold mb-4">Login do Admin</h2>
 
-    <div class="mb-4">
-      <label class="block text-sm font-medium mb-1">Senha</label>
-      <input
-        [(ngModel)]="senha"
-        name="senha"
-        type="password"
-        class="w-full border border-gray-300 rounded p-2"
-        required />
-    </div>
+      <div class="mb-4">
+        <label class="block text-sm font-medium">Login</label>
+        <input [(ngModel)]="login" name="login" class="w-full border border-gray-300 p-2 rounded" required />
+      </div>
 
-    <div *ngIf="error" class="text-red-500 text-sm mb-2">{{ error }}</div>
+      <div class="mb-4">
+        <label class="block text-sm font-medium">Senha</label>
+        <input
+          [(ngModel)]="senha"
+          type="password"
+          name="senha"
+          class="w-full border border-gray-300 p-2 rounded"
+          required />
+      </div>
 
-    <button type="submit" class="w-full bg-blue-600 text-white p-2 rounded hover:bg-blue-700">Entrar</button>
-  </form>
+      <button class="w-full bg-blue-600 text-white p-2 rounded hover:bg-blue-700" type="submit">
+        Entrar
+      </button>
+    </form>
+  </div>
 </div>
