@@ -5,7 +5,7 @@ import { SoonComponent } from './soon/soon.component';
 import { AdmissaoComponent } from './admissao/admissao.component';
 import { MetodologiaEnsinoComponent } from './metodologia-ensino/metodologia-ensino.component';
 import { DiferenciaisComponent } from './diferenciais/diferenciais.component';
-import { PublicLayoutComponent } from './layout/public-layout/public-layout.component';
+import { PublicLayoutComponent } from './layout/public-layout.component';
 
 const routes: Routes = [
   {

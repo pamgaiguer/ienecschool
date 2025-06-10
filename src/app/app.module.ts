@@ -1,7 +1,7 @@
 import { NgModule, isDevMode } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { SharedModule } from './shared/shared.module';
-import { PublicLayoutComponent } from './layout/public-layout/public-layout.component';
+import { PublicLayoutComponent } from './layout/public-layout.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ComponentsModule } from '../components/components.module';

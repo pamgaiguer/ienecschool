@@ -12,8 +12,12 @@ export class AppComponent implements OnInit {
   constructor(public router: Router) {}
   title = 'Colégio Ienec';
 
-  isLoginRoute(): boolean {
-    return this.router.url.startsWith('/admin/login');
+  isAdminLogin(): boolean {
+    return this.router.url === '/admin/login';
+  }
+
+  isAdminRoute(): boolean {
+    return this.router.url.startsWith('/admin');
   }
 
   ngOnInit(): void {
