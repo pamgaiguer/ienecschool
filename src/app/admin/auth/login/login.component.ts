@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
-import { environment } from '../../../../environments/environments';
+import { AuthService } from '../auth.service';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -13,25 +13,21 @@ export class LoginComponent {
   error = '';
 
   constructor(
-    private http: HttpClient,
+    private authService: AuthService,
     private router: Router,
   ) {}
 
   onSubmit() {
     this.error = '';
-    this.http
-      .post(`${environment.apiUrl}/api/token/`, {
-        username: this.login,
-        password: this.senha,
-      })
-      .subscribe({
-        next: (res: any) => {
-          localStorage.setItem('token', res.access);
-          this.router.navigate(['/admin']);
-        },
-        error: () => {
-          this.error = 'Login ou senha inválidos';
-        },
-      });
+
+    this.authService.login(this.login, this.senha).subscribe({
+      next: (res: any) => {
+        localStorage.setItem('token', res.access);
+        this.router.navigate(['/admin']);
+      },
+      error: () => {
+        this.error = 'Login ou senha inválidos';
+      },
+    });
   }
 }

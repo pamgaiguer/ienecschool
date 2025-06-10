@@ -1,10 +1,6 @@
 <div class="min-h-screen flex">
-  <aside class="w-64 bg-white border-r p-4">
-    <h1 class="text-xl font-bold mb-6">IENEC</h1>
-    <nav class="flex flex-col gap-2">
-      <a routerLink="/admin/dashboard" routerLinkActive="text-blue-600">Dashboard</a>
-    </nav>
-  </aside>
+  <app-sidebar></app-sidebar>
+
   <main class="flex-1 p-8 bg-gray-50">
     <router-outlet></router-outlet>
   </main>

@@ -5,19 +5,25 @@ import { SoonComponent } from './soon/soon.component';
 import { AdmissaoComponent } from './admissao/admissao.component';
 import { MetodologiaEnsinoComponent } from './metodologia-ensino/metodologia-ensino.component';
 import { DiferenciaisComponent } from './diferenciais/diferenciais.component';
+import { PublicLayoutComponent } from './layout/public-layout/public-layout.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
-  { path: 'home', component: HomeComponent },
-  { path: 'soon', component: SoonComponent },
-  { path: 'metodologias', component: MetodologiaEnsinoComponent },
-  { path: 'diferenciais', component: DiferenciaisComponent },
-  { path: 'admissao', component: AdmissaoComponent },
+  {
+    path: '',
+    component: PublicLayoutComponent,
+    children: [
+      { path: '', redirectTo: 'home', pathMatch: 'full' },
+      { path: 'home', component: HomeComponent },
+      { path: 'soon', component: SoonComponent },
+      { path: 'metodologias', component: MetodologiaEnsinoComponent },
+      { path: 'diferenciais', component: DiferenciaisComponent },
+      { path: 'admissao', component: AdmissaoComponent },
+    ],
+  },
   //rotas modulo admin
   {
     path: 'admin',
-    loadChildren: () =>
-      import('./admin/admin-routing.module').then(m => m.AdminRoutingModule),
+    loadChildren: () => import('./admin/admin-routing.module').then(m => m.AdminRoutingModule),
   },
 ];
 

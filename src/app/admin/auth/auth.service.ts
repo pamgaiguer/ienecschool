@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
-import { environment } from '../../../environments/environments';
+import { environment } from '../../../environments/environment';
 
 @Injectable({ providedIn: 'root' })
 export class AuthService {
@@ -12,10 +12,10 @@ export class AuthService {
     private router: Router,
   ) {}
 
-  login(username: string, password: string) {
-    return this.http.post(`${environment.apiUrl}/api/token/`, {
-      username,
-      password,
+  login(login: string, senha: string) {
+    return this.http.post(this.apiUrl, {
+      login,
+      senha,
     });
   }
 
