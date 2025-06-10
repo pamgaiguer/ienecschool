@@ -1,4 +1,3 @@
-// src/app/admin/auth/auth.service.ts
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
@@ -13,8 +12,11 @@ export class AuthService {
     private router: Router,
   ) {}
 
-  login(login: string, senha: string) {
-    return this.http.post(this.apiUrl, { login, senha });
+  login(username: string, password: string) {
+    return this.http.post(`${environment.apiUrl}/api/token/`, {
+      username,
+      password,
+    });
   }
 
   logout() {

@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
-
+import { environment } from '../../../../environments/environments';
 @Component({
-    selector: 'app-login',
-    templateUrl: './login.component.html',
-    standalone: false
+  selector: 'app-login',
+  templateUrl: './login.component.html',
+  standalone: false,
 })
 export class LoginComponent {
   login = '';
@@ -20,9 +20,9 @@ export class LoginComponent {
   onSubmit() {
     this.error = '';
     this.http
-      .post('http://localhost:8000/api/token/', {
-        login: this.login,
-        senha: this.senha,
+      .post(`${environment.apiUrl}/api/token/`, {
+        username: this.login,
+        password: this.senha,
       })
       .subscribe({
         next: (res: any) => {
