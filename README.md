@@ -1,27 +1,85 @@
-# Ienecschool
+# 🏫 Ienec School – Painel Administrativo
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.12.
+Este projeto é um painel administrativo construído em **Angular**, que consome uma API REST desenvolvida em **Python/Django**.  
+O sistema permite gerenciar conteúdos como banners, segmentos, carrosséis, diferenciais e metodologias educacionais.
 
-## Development server
+---
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## 🔧 Tecnologias Utilizadas
 
-## Code scaffolding
+### Frontend
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- [Angular 19](https://angular.io/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Angular Forms / Routing / Guards](https://angular.io/guide/forms-overview)
+- [Vite (opcional para testes)](https://vitejs.dev/)
 
-## Build
+### Backend
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- [Python 3](https://www.python.org/)
+- [Django 4.x](https://www.djangoproject.com/)
+- [Django REST Framework](https://www.django-rest-framework.org/)
+- [JWT Authentication](https://django-rest-framework-simplejwt.readthedocs.io/en/latest/)
 
-## Running unit tests
+---
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## 📁 Estrutura do Projeto
 
-## Running end-to-end tests
+src/
+├── app/
+│ ├── admin/
+│ │ ├── auth/ → Login, AuthService, Guard
+│ │ ├── dashboard/ → Painel inicial
+│ │ ├── home-banner/
+│ │ ├── segmentos-ensino/
+│ │ ├── carrossel/
+│ │ ├── diferenciais/
+│ │ ├── metodologias/
+│ │ └── guards/ → AuthGuard
+│ ├── shared/ → Componentes comuns
+├── assets/
+│ └── imagens, ícones, etc.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+---
 
-## Further help
+## 🚀 Como Rodar o Projeto
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+### 🖥️ Frontend (Angular)
+
+```bash
+# Instalar dependências
+npm install
+# Rodar o projeto em desenvolvimento
+npm start
+```
+
+O app estará disponível em: http://localhost:4200
+
+🔗 Backend (Django)
+
+# Ativar virtualenv, caso ainda não esteja
+
+source venv/bin/activate
+
+# Rodar servidor Django
+
+python manage.py runserver
+
+A API estará disponível em: http://localhost:8000
+
+🔐 Autenticação
+O login é baseado em JWT Token, com envio dos dados para o endpoint:
+
+POST /api/token/
+{
+"login": "admin",
+"senha": "suasenha"
+}
+
+✍️ Autora
+Desenvolvido por Pam Gaiguer
+[https://www.linkedin.com/in/pamellagaiguer/](LinkedIn) | [https://pamgaiguer.vercel.app/](Site pessoal)
+
+📄 Licença
+Este projeto está sob a licença MIT.
