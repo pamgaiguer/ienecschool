@@ -28,3 +28,56 @@
     font-variation-settings: 'MORF' 40;
   }
 }
+
+@layer base {
+  body {
+    @apply font-lato;
+  }
+}
+
+.toast-confirm-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.5rem;
+}
+
+.toast-title {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #1f2937; /* text-gray-800 */
+}
+
+.toast-actions {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.toast-btn {
+  padding: 6px 16px;
+  font-weight: 500;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.toast-btn.cancelar {
+  background-color: #f3f4f6; /* gray-100 */
+  color: #374151; /* gray-700 */
+}
+
+.toast-btn.cancelar:hover {
+  background-color: #e5e7eb; /* gray-200 */
+}
+
+.toast-btn.confirmar {
+  background-color: #dc2626; /* red-600 */
+  color: white;
+}
+
+.toast-btn.confirmar:hover {
+  background-color: #b91c1c; /* red-700 */
+}

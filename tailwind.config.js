@@ -17,16 +17,12 @@ module.exports = {
       yellowDefault: '#FEC400',
     },
     fontFamily: {
-      'inter-regular': ['Inter', 'sans-serif'],
+      lato: ['Lato', 'sans-serif'],
     },
     extend: {},
     container: {
       center: true,
     },
   },
-  plugins: [
-    require('flowbite/plugin'),
-    'prettier-plugin-tailwindcss',
-    require('@tailwindcss/typography'),
-  ],
+  plugins: [require('flowbite/plugin'), 'prettier-plugin-tailwindcss', require('@tailwindcss/typography')],
 };

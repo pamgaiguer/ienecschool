@@ -1,1 +1,45 @@
-<h2 class="text-2xl font-bold">Bem-vindo ao Painel Admin</h2>
+<div class="p-6">
+  <h2 class="text-2xl font-semibold mb-6">Olá, {{ nomeUsuario }} 👋</h2>
+
+  <div class="grid grid-cols-3 gap-4">
+    <!-- Botão para Diferenciais -->
+    <a
+      routerLink="/admin/diferenciais"
+      class="flex items-center gap-2 p-4 border rounded hover:bg-blue-50 transition cursor-pointer">
+      <i class="fas fa-star text-blue-600 text-xl"></i>
+      <span class="text-sm font-medium text-blue-600">Diferenciais</span>
+    </a>
+
+    <!-- Botão para Metodologias -->
+    <a
+      routerLink="/admin/metodologias"
+      class="flex items-center gap-2 p-4 border rounded hover:bg-blue-50 transition cursor-pointer">
+      <i class="fas fa-book text-blue-600 text-xl"></i>
+      <span class="text-sm font-medium text-blue-600">Metodologias</span>
+    </a>
+
+    <!-- Botão para Home - Banner -->
+    <a
+      routerLink="/admin/home-banner"
+      class="flex items-center gap-2 p-4 border rounded hover:bg-blue-50 transition cursor-pointer">
+      <i class="fas fa-image text-blue-600 text-xl"></i>
+      <span class="text-sm font-medium text-blue-600">Home - Banner</span>
+    </a>
+
+    <!-- Botão para Home - Carrossel -->
+    <a
+      routerLink="/admin/home-carrossel"
+      class="flex items-center gap-2 p-4 border rounded hover:bg-blue-50 transition cursor-pointer">
+      <i class="fas fa-clone text-blue-600 text-xl"></i>
+      <span class="text-sm font-medium text-blue-600">Home - Carrossel</span>
+    </a>
+
+    <!-- Botão para Segmentos de Ensino -->
+    <a
+      routerLink="/admin/segmentos-ensino"
+      class="flex items-center gap-2 p-4 border rounded hover:bg-blue-50 transition cursor-pointer">
+      <i class="fas fa-graduation-cap text-blue-600 text-xl"></i>
+      <span class="text-sm font-medium text-blue-600">Segmentos de Ensino</span>
+    </a>
+  </div>
+</div>

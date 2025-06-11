@@ -17,7 +17,7 @@ export class AppComponent implements OnInit {
   }
 
   isAdminRoute(): boolean {
-    return this.router.url.startsWith('/admin');
+    return this.router.url.startsWith('/admin') && this.router.url !== '/admin/login';
   }
 
   ngOnInit(): void {

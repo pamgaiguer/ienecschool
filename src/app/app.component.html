@@ -1,8 +1,10 @@
-<ng-container *ngIf="isAdminLogin(); else layoutSelector">
+<!-- LOGIN ADMIN -->
+<ng-container *ngIf="isAdminLogin(); else routeHandler">
   <router-outlet></router-outlet>
 </ng-container>
 
-<ng-template #layoutSelector>
+<!-- ROTAS PÚBLICAS E ROTAS ADMIN -->
+<ng-template #routeHandler>
   <ng-container *ngIf="isAdminRoute(); else publicLayout">
     <router-outlet></router-outlet>
   </ng-container>

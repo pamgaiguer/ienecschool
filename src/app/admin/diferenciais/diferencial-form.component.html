@@ -1,0 +1,35 @@
+<div class="p-6 max-w-2xl mx-auto bg-white border rounded shadow">
+  <h2 class="text-xl font-semibold mb-4">{{ isEdit ? 'Editar' : 'Novo' }} Diferencial</h2>
+
+  <form (ngSubmit)="onSubmit()" [formGroup]="form">
+    <div class="mb-4">
+      <label class="block text-sm font-medium mb-1">Título</label>
+      <input type="text" formControlName="titulo" class="w-full border px-3 py-2 rounded" />
+    </div>
+
+    <div class="mb-4">
+      <label class="block text-sm font-medium mb-1">Descrição</label>
+      <textarea formControlName="descricao" class="w-full border px-3 py-2 rounded"></textarea>
+    </div>
+
+    <div class="mb-4">
+      <label class="block text-sm font-medium mb-1">Imagem</label>
+      <input type="file" (change)="onFileChange($event)" />
+    </div>
+
+    <div *ngIf="imagemPreview" class="mb-4">
+      <p class="text-sm text-gray-600 mb-1">Prévia da imagem:</p>
+      <img [src]="imagemPreview" class="w-32 h-32 object-cover rounded border" />
+    </div>
+
+    <button
+      type="submit"
+      [disabled]="loading"
+      class="flex items-center gap-2 px-4 py-2 border border-blueDefault text-blueDefault rounded hover:bg-blue-100 transition">
+      <span
+        *ngIf="loading"
+        class="animate-spin h-4 w-4 border-2 border-blue-500 border-t-transparent rounded-full"></span>
+      {{ loading ? 'Salvando...' : isEdit ? 'Atualizar' : 'Criar' }}
+    </button>
+  </form>
+</div>

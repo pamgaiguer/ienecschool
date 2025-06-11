@@ -1,0 +1,42 @@
+<div class="p-6">
+  <div class="flex justify-between items-center mb-4">
+    <h2 class="text-xl font-semibold">Diferenciais</h2>
+    <a
+      [routerLink]="['/admin/diferenciais/novo']"
+      class="group inline-flex items-center gap-2 border border-blue-600 text-blue-600 px-4 py-2 rounded hover:bg-blue-700 hover:text-white transition">
+      <i class="fas fa-plus text-blue-600 group-hover:text-white"></i>
+      Adicionar Diferencial
+    </a>
+  </div>
+
+  <table class="min-w-full bg-white border">
+    <thead>
+      <tr class="bg-gray-100 text-left">
+        <th class="p-2 border">Título</th>
+        <th class="p-2 border">Descrição</th>
+        <th class="p-2 border text-center">Prévia</th>
+        <th class="p-2 border text-center">Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let diferencial of diferenciais">
+        <td class="p-2 border">{{ diferencial.titulo }}</td>
+        <td class="p-2 border">{{ diferencial.descricao | slice: 0 : 100 }}...</td>
+        <td class="p-2 border text-center">
+          <img [src]="diferencial.imagem" class="w-12 h-12 object-cover mx-auto" />
+        </td>
+        <td class="p-2 border text-center">
+          <div class="flex justify-center items-center gap-2">
+            <a [routerLink]="['/admin/diferenciais/editar', diferencial.id]" title="Editar">
+              <i class="fas fa-pen-to-square text-blue-600 hover:text-blue-700 transition"></i>
+            </a>
+
+            <button (click)="remover(diferencial.id)" title="Remover">
+              <i class="fas fa-trash text-red-600 hover:text-red-700 transition"></i>
+            </button>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,11 +1,27 @@
-<aside class="w-64 bg-white border-r p-4 min-h-screen">
-  <h1 class="text-xl font-bold mb-6">IENEC</h1>
-  <nav class="flex flex-col gap-2">
-    <a routerLink="/admin/dashboard" routerLinkActive="text-blue-600">Dashboard</a>
-    <a routerLink="/admin/diferenciais" routerLinkActive="text-blue-600">Diferenciais</a>
-    <a routerLink="/admin/metodologias" routerLinkActive="text-blue-600">Metodologias</a>
-    <a routerLink="/admin/home-banner" routerLinkActive="text-blue-600">Home - Banner</a>
-    <a routerLink="/admin/home-carrossel" routerLinkActive="text-blue-600">Home - Carrossel</a>
-    <a routerLink="/admin/segmentos-ensino" routerLinkActive="text-blue-600">Segmentos de Ensino</a>
-  </nav>
+<aside class="w-64 bg-white border-r p-4 min-h-screen flex flex-col justify-between">
+  <!-- Topo: logo e navegação -->
+  <div>
+    <h1 class="text-xl font-bold mb-6">
+      <img src="../../../assets/logo.png" class="block mx-auto" alt="logo admin" />
+    </h1>
+    <nav class="flex flex-col gap-1">
+      <a routerLink="/admin/dashboard" routerLinkActive="text-blue-600">Dashboard</a>
+      <a routerLink="/admin/diferenciais" routerLinkActive="text-blue-600">Diferenciais</a>
+      <a routerLink="/admin/metodologias" routerLinkActive="text-blue-600">Metodologias</a>
+      <a routerLink="/admin/home-banner" routerLinkActive="text-blue-600">Home - Banner</a>
+      <a routerLink="/admin/home-carrossel" routerLinkActive="text-blue-600">Home - Carrossel</a>
+      <a routerLink="/admin/segmentos-ensino" routerLinkActive="text-blue-600">Segmentos de Ensino</a>
+    </nav>
+  </div>
+
+  <div>
+    <button
+      (click)="logout()"
+      class="group w-full mt-6 py-2 px-4 border border-red-600 text-red-600 rounded flex items-center justify-center gap-2 hover:bg-red-700 hover:text-white transition">
+      <i class="fas fa-sign-out-alt text-red-600 group-hover:text-white"></i>
+      Logout
+    </button>
+  </div>
 </aside>
+
+<!--  -->

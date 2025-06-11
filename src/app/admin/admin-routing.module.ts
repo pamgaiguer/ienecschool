@@ -4,6 +4,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { AdminLayoutComponent } from './layout/admin-layout.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { DiferenciaisComponent } from './diferenciais/diferenciais.component';
+import { DiferenciaisListComponent } from './diferenciais/diferenciais-list.component';
+import { DiferencialFormComponent } from './diferenciais/diferencial-form.component';
 import { MetodologiasComponent } from './metodologias/metodologias.component';
 import { HomeBannerComponent } from './home-banner/home-banner.component';
 import { HomeCarrosselComponent } from './home-carrossel/home-carrossel.component';
@@ -20,7 +22,20 @@ const routes: Routes = [
     children: [
       { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
       { path: 'dashboard', component: DashboardComponent },
-      { path: 'diferenciais', component: DiferenciaisComponent },
+      // { path: 'diferenciais', component: DiferenciaisComponent },
+      {
+        path: 'diferenciais',
+        component: DiferenciaisListComponent,
+      },
+      {
+        path: 'diferenciais/novo',
+        component: DiferencialFormComponent,
+      },
+      {
+        path: 'diferenciais/editar/:id',
+        component: DiferencialFormComponent,
+      },
+
       { path: 'metodologias', component: MetodologiasComponent },
       { path: 'home-banner', component: HomeBannerComponent },
       { path: 'home-carrossel', component: HomeCarrosselComponent },
