@@ -18,6 +18,8 @@ import { MetodologiasComponent } from './metodologias/metodologias.component';
 import { HomeBannerComponent } from './home-banner/home-banner.component';
 import { HomeCarrosselComponent } from './home-carrossel/home-carrossel.component';
 import { SegmentosEnsinoComponent } from './segmentos-ensino/segmentos-ensino.component';
+import { SegmentosFormComponent } from './segmentos-ensino/segmentos-ensino-form.component';
+import { SegmentosListComponent } from './segmentos-ensino/segmentos-ensino-list.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { SharedModule } from '../shared/shared.module';
 
@@ -32,6 +34,8 @@ import { SharedModule } from '../shared/shared.module';
     HomeBannerComponent,
     HomeCarrosselComponent,
     SegmentosEnsinoComponent,
+    SegmentosFormComponent,
+    SegmentosListComponent,
     SidebarComponent,
     LoginComponent,
   ],

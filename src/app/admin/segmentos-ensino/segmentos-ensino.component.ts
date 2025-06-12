@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-segmentos-ensino',
+  selector: 'app-diferenciais',
   templateUrl: './segmentos-ensino.component.html',
   standalone: false,
 })

@@ -12,6 +12,8 @@ import { HomeCarrosselComponent } from './home-carrossel/home-carrossel.componen
 import { SegmentosEnsinoComponent } from './segmentos-ensino/segmentos-ensino.component';
 import { LoginComponent } from './auth/login/login.component';
 import { AuthGuard } from './guards/auth.guard';
+import { SegmentosListComponent } from './segmentos-ensino/segmentos-ensino-list.component';
+import { SegmentosFormComponent } from './segmentos-ensino/segmentos-ensino-form.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -22,7 +24,6 @@ const routes: Routes = [
     children: [
       { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
       { path: 'dashboard', component: DashboardComponent },
-      // { path: 'diferenciais', component: DiferenciaisComponent },
       {
         path: 'diferenciais',
         component: DiferenciaisListComponent,
@@ -35,11 +36,13 @@ const routes: Routes = [
         path: 'diferenciais/editar/:id',
         component: DiferencialFormComponent,
       },
+      { path: 'segmentos-ensino', component: SegmentosListComponent },
+      { path: 'segmentos-ensino/novo', component: SegmentosFormComponent },
+      { path: 'segmentos-ensino/editar/:id', component: SegmentosFormComponent },
 
       { path: 'metodologias', component: MetodologiasComponent },
       { path: 'home-banner', component: HomeBannerComponent },
       { path: 'home-carrossel', component: HomeCarrosselComponent },
-      { path: 'segmentos-ensino', component: SegmentosEnsinoComponent },
     ],
   },
 ];
