@@ -9,7 +9,6 @@ import { DiferencialFormComponent } from './diferenciais/diferencial-form.compon
 import { MetodologiasComponent } from './metodologias/metodologias.component';
 import { HomeBannerComponent } from './home-banner/home-banner.component';
 import { HomeCarrosselComponent } from './home-carrossel/home-carrossel.component';
-import { SegmentosEnsinoComponent } from './segmentos-ensino/segmentos-ensino.component';
 import { LoginComponent } from './auth/login/login.component';
 import { AuthGuard } from './guards/auth.guard';
 import { SegmentosListComponent } from './segmentos-ensino/segmentos-ensino-list.component';
@@ -24,18 +23,9 @@ const routes: Routes = [
     children: [
       { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
       { path: 'dashboard', component: DashboardComponent },
-      {
-        path: 'diferenciais',
-        component: DiferenciaisListComponent,
-      },
-      {
-        path: 'diferenciais/novo',
-        component: DiferencialFormComponent,
-      },
-      {
-        path: 'diferenciais/editar/:id',
-        component: DiferencialFormComponent,
-      },
+      { path: 'diferenciais', component: DiferenciaisListComponent },
+      { path: 'diferenciais/novo', component: DiferencialFormComponent },
+      { path: 'diferenciais/editar/:id', component: DiferencialFormComponent },
       { path: 'segmentos-ensino', component: SegmentosListComponent },
       { path: 'segmentos-ensino/novo', component: SegmentosFormComponent },
       { path: 'segmentos-ensino/editar/:id', component: SegmentosFormComponent },

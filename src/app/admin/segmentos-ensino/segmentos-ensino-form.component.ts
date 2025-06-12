@@ -65,7 +65,7 @@ export class SegmentosFormComponent implements OnInit {
     const formData = new FormData();
     formData.append('titulo', this.form.value.titulo);
     formData.append('descricao', this.form.value.descricao);
-    if (this.form.value.imagem) {
+    if (this.form.value.imagem instanceof File) {
       formData.append('imagem', this.form.value.imagem);
     }
 
@@ -78,7 +78,7 @@ export class SegmentosFormComponent implements OnInit {
         this.toastr.success(
           this.isEdit ? 'Segmento atualizado com sucesso!' : 'Segmento criado com sucesso!',
         );
-        this.router.navigate(['/admin/diferenciais']);
+        this.router.navigate(['/admin/segmentos-ensino']);
       },
       error: err => {
         if (err.status === 400 || err.status === 422) {

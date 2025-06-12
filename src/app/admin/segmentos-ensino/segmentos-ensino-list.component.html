@@ -1,17 +1,18 @@
 <div class="p-6">
   <div class="flex justify-between items-center mb-4">
-    <h2 class="text-xl font-semibold">Diferenciais</h2>
+    <h2 class="text-xl font-semibold">Segmentos de Ensino</h2>
     <a
       [routerLink]="['/admin/segmentos-ensino/novo']"
       class="group inline-flex items-center gap-2 border border-blue-600 text-blue-600 px-4 py-2 rounded hover:bg-blue-700 hover:text-white transition">
       <i class="fas fa-plus text-blue-600 group-hover:text-white"></i>
-      Adicionar Diferencial
+      Adicionar Segmento
     </a>
   </div>
 
   <table class="min-w-full bg-white border">
     <thead>
       <tr class="bg-gray-100 text-left">
+        <th class="p-2 border">Código</th>
         <th class="p-2 border">Título</th>
         <th class="p-2 border">Descrição</th>
         <th class="p-2 border text-center">Prévia</th>
@@ -20,6 +21,7 @@
     </thead>
     <tbody>
       <tr *ngFor="let segmento of segmentos">
+        <td class="p-2 border">{{ segmento.codigo }}</td>
         <td class="p-2 border">{{ segmento.titulo }}</td>
         <td class="p-2 border">{{ segmento.descricao | slice: 0 : 100 }}...</td>
         <td class="p-2 border text-center">
