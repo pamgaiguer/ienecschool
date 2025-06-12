@@ -19,6 +19,7 @@ import { HomeBannerComponent } from './home-banner/home-banner.component';
 import { HomeCarrosselComponent } from './home-carrossel/home-carrossel.component';
 import { SegmentosEnsinoComponent } from './segmentos-ensino/segmentos-ensino.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,7 @@ import { SidebarComponent } from './sidebar/sidebar.component';
     SidebarComponent,
     LoginComponent,
   ],
-  imports: [CommonModule, RouterModule, ReactiveFormsModule, FormsModule, AdminRoutingModule],
+  imports: [CommonModule, RouterModule, SharedModule, ReactiveFormsModule, FormsModule, AdminRoutingModule],
   exports: [AdminLayoutComponent],
 })
 export class AdminModule {}

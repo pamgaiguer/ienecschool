@@ -10,6 +10,8 @@ import { NotificationService } from 'src/app/shared/notification.service';
 })
 export class DiferenciaisListComponent implements OnInit {
   diferenciais: any[] = [];
+  modalAberto = false;
+  idParaRemover: number | null = null;
 
   constructor(
     private diferencialService: DiferencialService,
@@ -29,12 +31,29 @@ export class DiferenciaisListComponent implements OnInit {
     });
   }
 
-  remover(id: number) {
-    this.notification.confirm('Deseja realmente remover este item?', () => {
-      this.diferencialService.delete(id).subscribe({
-        next: () => this.notification.success('Removido com sucesso!'),
-        error: () => this.notification.error('Erro ao remover o item.'),
-      });
+  abrirModal(id: number) {
+    this.idParaRemover = id;
+    this.modalAberto = true;
+  }
+
+  fecharModal() {
+    this.modalAberto = false;
+    this.idParaRemover = null;
+  }
+
+  confirmarRemocao() {
+    if (!this.idParaRemover) return;
+
+    this.diferencialService.delete(this.idParaRemover).subscribe({
+      next: () => {
+        this.notification.success('Removido com sucesso!');
+        this.diferenciais = this.diferenciais.filter(d => d.id !== this.idParaRemover);
+        this.fecharModal();
+      },
+      error: () => {
+        this.notification.error('Erro ao remover o item.');
+        this.fecharModal();
+      },
     });
   }
 }
