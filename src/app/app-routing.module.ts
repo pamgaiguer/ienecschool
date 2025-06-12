@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+
 import { HomeComponent } from './home/home.component';
 import { SoonComponent } from './soon/soon.component';
 import { AdmissaoComponent } from './admissao/admissao.component';
@@ -12,7 +13,7 @@ const routes: Routes = [
     path: '',
     component: PublicLayoutComponent,
     children: [
-      { path: '', redirectTo: 'home', pathMatch: 'full' },
+      { path: '', redirectTo: 'home', pathMatch: 'full' }, // / => /home
       { path: 'home', component: HomeComponent },
       { path: 'soon', component: SoonComponent },
       { path: 'metodologias', component: MetodologiaEnsinoComponent },
@@ -20,10 +21,13 @@ const routes: Routes = [
       { path: 'admissao', component: AdmissaoComponent },
     ],
   },
-  //rotas modulo admin
   {
     path: 'admin',
     loadChildren: () => import('./admin/admin-routing.module').then(m => m.AdminRoutingModule),
+  },
+  {
+    path: '**',
+    redirectTo: 'home', // fallback para rotas desconhecidas
   },
 ];
 
