@@ -10,7 +10,8 @@ import { DiferenciaisListComponent } from './diferenciais/diferenciais-list.comp
 import { DiferencialFormComponent } from './diferenciais/diferencial-form.component';
 import { SegmentosListComponent } from './segmentos-ensino/segmentos-ensino-list.component';
 import { SegmentosFormComponent } from './segmentos-ensino/segmentos-ensino-form.component';
-import { MetodologiasComponent } from './metodologias/metodologias.component';
+import { MetodologiasListComponent } from './metodologias/metodologias-list.component';
+import { MetodologiasFormComponent } from './metodologias/metodologias-form.component';
 import { HomeBannerComponent } from './home-banner/home-banner.component';
 import { HomeCarrosselComponent } from './home-carrossel/home-carrossel.component';
 
@@ -36,7 +37,9 @@ const routes: Routes = [
       { path: 'segmentos-ensino', component: SegmentosListComponent },
       { path: 'segmentos-ensino/novo', component: SegmentosFormComponent },
       { path: 'segmentos-ensino/editar/:id', component: SegmentosFormComponent },
-      { path: 'metodologias', component: MetodologiasComponent },
+      { path: 'metodologias', component: MetodologiasListComponent },
+      { path: 'metodologias/novo', component: MetodologiasFormComponent },
+      { path: 'metodologias/editar/:id', component: MetodologiasFormComponent },
       { path: 'home-banner', component: HomeBannerComponent },
       { path: 'home-carrossel', component: HomeCarrosselComponent },
     ],

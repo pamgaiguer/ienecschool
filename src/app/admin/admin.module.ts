@@ -9,7 +9,8 @@ import { AdminLayoutComponent } from './layout/admin-layout.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { DiferenciaisListComponent } from './diferenciais/diferenciais-list.component';
 import { DiferencialFormComponent } from './diferenciais/diferencial-form.component';
-import { MetodologiasComponent } from './metodologias/metodologias.component';
+import { MetodologiasListComponent } from './metodologias/metodologias-list.component';
+import { MetodologiasFormComponent } from './metodologias/metodologias-form.component';
 import { HomeBannerComponent } from './home-banner/home-banner.component';
 import { HomeCarrosselComponent } from './home-carrossel/home-carrossel.component';
 import { SegmentosFormComponent } from './segmentos-ensino/segmentos-ensino-form.component';
@@ -24,7 +25,8 @@ import { AuthGuard } from './guards/auth.guard';
     DashboardComponent,
     DiferenciaisListComponent,
     DiferencialFormComponent,
-    MetodologiasComponent,
+    MetodologiasListComponent,
+    MetodologiasFormComponent,
     HomeBannerComponent,
     HomeCarrosselComponent,
     SegmentosFormComponent,

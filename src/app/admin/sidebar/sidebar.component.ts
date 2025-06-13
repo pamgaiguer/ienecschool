@@ -12,6 +12,6 @@ export class SidebarComponent {
 
   logout() {
     localStorage.clear(); // ou authService.logout()
-    this.router.navigate(['/login']); // Redireciona para login
+    this.router.navigate(['/admin/login']); // Redireciona para login
   }
 }
