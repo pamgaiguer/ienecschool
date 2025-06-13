@@ -4,8 +4,7 @@ import { HTTP_INTERCEPTORS, provideHttpClient, withInterceptorsFromDi } from '@a
 import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
-import { AppRoutingModule } from './app-routing.module'; // <- Importar POR ÚLTIMO!
-import { AdminModule } from './admin/admin.module';
+import { AppRoutingModule } from './app-routing.module';
 import { SharedModule } from './shared/shared.module';
 import { ComponentsModule } from '../components/components.module';
 
@@ -23,6 +22,7 @@ import { ToastrModule } from 'ngx-toastr';
 
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { AuthInterceptor } from './auth.interceptor';
+import { AuthGuard } from './admin/guards/auth.guard';
 
 @NgModule({
   declarations: [
@@ -41,7 +41,6 @@ import { AuthInterceptor } from './auth.interceptor';
     RouterModule,
     SharedModule,
     ComponentsModule,
-    AdminModule,
     AppRoutingModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: !isDevMode(),
@@ -60,6 +59,7 @@ import { AuthInterceptor } from './auth.interceptor';
       useClass: AuthInterceptor,
       multi: true,
     },
+    AuthGuard, // <- Adicione esta linha
   ],
   bootstrap: [AppComponent],
 })
