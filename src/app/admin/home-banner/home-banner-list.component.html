@@ -1,0 +1,76 @@
+<div class="p-6">
+  <div class="flex justify-between items-center mb-4">
+    <h2 class="text-xl font-semibold">Metodologias</h2>
+    <a
+      [routerLink]="['/admin/home-banner/novo']"
+      class="group inline-flex items-center gap-2 border border-blue-600 text-blue-600 px-4 py-2 rounded hover:bg-blue-700 hover:text-white transition">
+      <i class="fas fa-plus text-blue-600 group-hover:text-white"></i>
+      Adicionar Metodologias
+    </a>
+  </div>
+
+  <table class="min-w-full bg-white border">
+    <thead>
+      <tr class="bg-gray-100 text-left">
+        <th class="p-2 border">Título</th>
+        <th class="p-2 border">Descrição</th>
+        <th class="p-2 border text-center">Prévia</th>
+        <th class="p-2 border text-center">Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let hBanner of homeBanner">
+        <td class="p-2 border">{{ hBanner.titulo }}</td>
+        <td class="p-2 border">{{ hBanner.descricao | slice: 0 : 100 }}...</td>
+        <td class="p-2 border text-center">
+          <img [src]="hBanner.imagem" class="w-12 h-12 object-cover mx-auto" />
+        </td>
+        <td class="p-2 border text-center">
+          <div class="flex justify-center items-center gap-2">
+            <a [routerLink]="['/admin/home-banner/editar', hBanner.id]" title="Editar">
+              <i class="fas fa-pen-to-square text-blue-600 hover:text-blue-700 transition"></i>
+            </a>
+
+            <button (click)="abrirModal(hBanner.id)" title="Remover">
+              <i class="fas fa-trash text-red-600 hover:text-red-700 transition"></i>
+            </button>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <!-- Modal de Confirmação -->
+  <div
+    *ngIf="modalAberto"
+    class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 backdrop-blur-sm">
+    <div class="bg-white rounded-lg shadow-lg w-full max-w-md p-6">
+      <!-- Cabeçalho -->
+      <div class="flex justify-between items-center border-b pb-3 mb-4">
+        <h3 class="text-lg font-semibold text-gray-800">Confirmar Exclusão</h3>
+        <button (click)="fecharModal()" class="text-gray-500 hover:text-gray-800 text-xl leading-none">
+          &times;
+        </button>
+      </div>
+
+      <!-- Mensagem -->
+      <p class="text-gray-700">
+        Tem certeza que deseja remover este item?<br />
+        <span class="text-sm text-gray-500">Essa ação não pode ser desfeita.</span>
+      </p>
+
+      <!-- Ações -->
+      <div class="flex justify-end mt-6 space-x-2">
+        <button
+          (click)="fecharModal()"
+          class="px-4 py-2 text-sm rounded border border-gray-300 text-gray-700 hover:bg-gray-100">
+          Cancelar
+        </button>
+        <button
+          (click)="confirmarRemocao()"
+          class="px-4 py-2 text-sm rounded bg-red-600 text-white hover:bg-red-700">
+          Remover
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -12,8 +12,10 @@ import { SegmentosListComponent } from './segmentos-ensino/segmentos-ensino-list
 import { SegmentosFormComponent } from './segmentos-ensino/segmentos-ensino-form.component';
 import { MetodologiasListComponent } from './metodologias/metodologias-list.component';
 import { MetodologiasFormComponent } from './metodologias/metodologias-form.component';
-import { HomeBannerComponent } from './home-banner/home-banner.component';
-import { HomeCarrosselComponent } from './home-carrossel/home-carrossel.component';
+import { HomeBannerListComponent } from './home-banner/home-banner-list.component';
+import { HomeBannerFormComponent } from './home-banner/home-banner-form.component';
+import { HomeCarrosselListComponent } from './home-carrossel/home-carrossel-list.component';
+import { HomeCarrosselFormComponent } from './home-carrossel/home-carrossel-form.component';
 
 const routes: Routes = [
   // Esta rota 'login' está no mesmo nível do 'admin' no módulo principal,
@@ -40,8 +42,12 @@ const routes: Routes = [
       { path: 'metodologias', component: MetodologiasListComponent },
       { path: 'metodologias/novo', component: MetodologiasFormComponent },
       { path: 'metodologias/editar/:id', component: MetodologiasFormComponent },
-      { path: 'home-banner', component: HomeBannerComponent },
-      { path: 'home-carrossel', component: HomeCarrosselComponent },
+      { path: 'home-banner', component: HomeBannerListComponent },
+      { path: 'home-banner/novo', component: HomeBannerFormComponent },
+      { path: 'home-banner/editar/:id', component: HomeBannerFormComponent },
+      { path: 'home-carrossel', component: HomeCarrosselListComponent },
+      { path: 'home-carrossel/novo', component: HomeCarrosselFormComponent },
+      { path: 'home-carrossel/editar/:id', component: HomeCarrosselFormComponent },
     ],
   },
   // Adicione uma rota wildcard para redirecionar ou tratar URLs desconhecidas dentro de /admin

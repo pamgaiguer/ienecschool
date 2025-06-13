@@ -11,8 +11,10 @@ import { DiferenciaisListComponent } from './diferenciais/diferenciais-list.comp
 import { DiferencialFormComponent } from './diferenciais/diferencial-form.component';
 import { MetodologiasListComponent } from './metodologias/metodologias-list.component';
 import { MetodologiasFormComponent } from './metodologias/metodologias-form.component';
-import { HomeBannerComponent } from './home-banner/home-banner.component';
-import { HomeCarrosselComponent } from './home-carrossel/home-carrossel.component';
+import { HomeBannerListComponent } from './home-banner/home-banner-list.component';
+import { HomeBannerFormComponent } from './home-banner/home-banner-form.component';
+import { HomeCarrosselListComponent } from './home-carrossel/home-carrossel-list.component';
+import { HomeCarrosselFormComponent } from './home-carrossel/home-carrossel-form.component';
 import { SegmentosFormComponent } from './segmentos-ensino/segmentos-ensino-form.component';
 import { SegmentosListComponent } from './segmentos-ensino/segmentos-ensino-list.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
@@ -27,8 +29,10 @@ import { AuthGuard } from './guards/auth.guard';
     DiferencialFormComponent,
     MetodologiasListComponent,
     MetodologiasFormComponent,
-    HomeBannerComponent,
-    HomeCarrosselComponent,
+    HomeBannerListComponent,
+    HomeBannerFormComponent,
+    HomeCarrosselListComponent,
+    HomeCarrosselFormComponent,
     SegmentosFormComponent,
     SegmentosListComponent,
     SidebarComponent,
