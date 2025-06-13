@@ -78,7 +78,7 @@ export class MetodologiasFormComponent implements OnInit {
         this.toastr.success(
           this.isEdit ? 'Metodologia atualizado com sucesso!' : 'Metodologia criado com sucesso!',
         );
-        this.router.navigate(['/admin/metodologias']);
+        this.router.navigate(['/admin/manage-metodologias']);
       },
       error: err => {
         if (err.status === 400 || err.status === 422) {

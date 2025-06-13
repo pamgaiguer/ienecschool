@@ -78,7 +78,7 @@ export class SegmentosFormComponent implements OnInit {
         this.toastr.success(
           this.isEdit ? 'Segmento atualizado com sucesso!' : 'Segmento criado com sucesso!',
         );
-        this.router.navigate(['/admin/diferenciais']);
+        this.router.navigate(['/admin/manage-segmentos']);
       },
       error: err => {
         if (err.status === 400 || err.status === 422) {

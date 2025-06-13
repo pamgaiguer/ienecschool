@@ -78,7 +78,7 @@ export class DiferencialFormComponent implements OnInit {
         this.toastr.success(
           this.isEdit ? 'Diferencial atualizado com sucesso!' : 'Diferencial criado com sucesso!',
         );
-        this.router.navigate(['/admin/diferenciais']);
+        this.router.navigate(['/admin/manage-diferenciais']);
       },
       error: err => {
         if (err.status === 400 || err.status === 422) {

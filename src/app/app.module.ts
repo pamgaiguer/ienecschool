@@ -1,7 +1,6 @@
 import { NgModule, isDevMode } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HTTP_INTERCEPTORS, provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
-import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -35,19 +34,17 @@ import { AuthGuard } from './admin/guards/auth.guard';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    AdminRoutingModule,
-    RouterModule,
+    AdminRoutingModule, // forChild
+    AppRoutingModule, // forRoot - deve vir depois de AdminRoutingModule
     SharedModule,
     ComponentsModule,
-    AppRoutingModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: !isDevMode(),
       registrationStrategy: 'registerWhenStable:30000',
     }),
     BrowserAnimationsModule,
     ToastrModule.forRoot({
-      positionClass: 'toast-bottom-right',
+      positionClass: 'toast-top-right',
       preventDuplicates: true,
     }),
   ],
