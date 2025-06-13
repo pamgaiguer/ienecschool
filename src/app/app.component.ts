@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
+import { Router, NavigationEnd } from '@angular/router';
+import { filter } from 'rxjs/operators';
 import { initFlowbite } from 'flowbite';
 
 @Component({
@@ -9,15 +10,52 @@ import { initFlowbite } from 'flowbite';
   standalone: false,
 })
 export class AppComponent implements OnInit {
-  constructor(public router: Router) {}
+  constructor(
+    public router: Router,
+    private cdr: ChangeDetectorRef,
+  ) {
+    this.router.events.pipe(filter(event => event instanceof NavigationEnd)).subscribe(() => {
+      this.checkRoute();
+      this.cdr.detectChanges(); // Garante atualização do DOM
+    });
+  }
+
   title = 'Colégio Ienec';
 
+  private isLoginRouteResult: boolean = false; // Nova variável para /login
+  private isAdminLoginResult: boolean = false;
+  private isAdminRouteResult: boolean = false;
+
+  isLoginRoute(): boolean {
+    console.log('isLoginRoute:', this.isLoginRouteResult, 'URL:', this.router.url);
+    return this.isLoginRouteResult;
+  }
+
   isAdminLogin(): boolean {
-    return this.router.url === '/admin/login';
+    console.log('isAdminLogin:', this.isAdminLoginResult, 'URL:', this.router.url);
+    return this.isAdminLoginResult;
   }
 
   isAdminRoute(): boolean {
-    return this.router.url.startsWith('/admin') && this.router.url !== '/admin/login';
+    console.log('isAdminRoute:', this.isAdminRouteResult, 'URL:', this.router.url);
+    return this.isAdminRouteResult;
+  }
+
+  private checkRoute() {
+    const currentRoute = this.router.url;
+    this.isLoginRouteResult = currentRoute === '/login'; // Detecta a rota pública /login
+    this.isAdminLoginResult = currentRoute === '/admin/login';
+    this.isAdminRouteResult = currentRoute.startsWith('/admin/') && currentRoute !== '/admin/login';
+    console.log(
+      'checkRoute - URL:',
+      currentRoute,
+      'isLoginRoute:',
+      this.isLoginRouteResult,
+      'isAdminLogin:',
+      this.isAdminLoginResult,
+      'isAdminRoute:',
+      this.isAdminRouteResult,
+    );
   }
 
   ngOnInit(): void {

@@ -21,6 +21,7 @@ import { ToastrModule } from 'ngx-toastr';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { AuthInterceptor } from './auth.interceptor';
 import { AuthGuard } from './admin/guards/auth.guard';
+import { AdminModule } from './admin/admin.module';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { AuthGuard } from './admin/guards/auth.guard';
     BrowserModule,
     AdminRoutingModule, // forChild
     AppRoutingModule, // forRoot - deve vir depois de AdminRoutingModule
+    AdminModule,
     SharedModule,
     ComponentsModule,
     ServiceWorkerModule.register('ngsw-worker.js', {

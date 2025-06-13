@@ -1,30 +1,76 @@
 <div class="min-h-screen flex">
+  <!-- Imagem lateral -->
   <div
     class="hidden md:flex w-1/2 bg-cover bg-center"
     style="background-image: url('../../../../assets/admin/ienec-home-admin.jpg')"></div>
 
-  <div class="flex w-full md:w-1/2 items-center justify-center bg-gray-50">
-    <form (ngSubmit)="onSubmit()" class="w-full max-w-sm p-6 bg-white shadow-md rounded">
-      <img class="block mx-auto mb-4 h-16" src="../../../../assets/logo.png" alt="" />
+  <!-- Formulário -->
+  <div class="flex w-full md:w-1/2 items-center justify-center bg-gray-50 px-4">
+    <form
+      [formGroup]="loginForm"
+      (ngSubmit)="onSubmit()"
+      class="w-full max-w-sm p-6 bg-white shadow-lg rounded-lg transition-all duration-300 ease-in-out">
+      <img class="block mx-auto mb-6 h-16" src="../../../../assets/logo.png" alt="Logo" />
 
-      <div class="mb-4">
-        <label class="block text-sm font-medium">Login</label>
-        <input [(ngModel)]="login" name="login" class="w-full border border-gray-300 p-2 rounded" required />
+      <!-- Campo Login -->
+      <div class="mb-5 transition-all duration-300 ease-in-out">
+        <label for="login" class="block text-sm font-medium text-gray-700 mb-1">Login</label>
+        <div class="relative">
+          <input
+            formControlName="login"
+            id="login"
+            name="login"
+            class="w-full border rounded px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 border-gray-300 transition-all duration-300 ease-in-out placeholder-gray-400"
+            [ngClass]="{
+              'border-red-500': loginForm.get('login')?.invalid && loginForm.get('login')?.touched,
+            }"
+            placeholder="Digite seu login"
+            required />
+        </div>
+        <p
+          *ngIf="loginForm.get('login')?.invalid && loginForm.get('login')?.touched"
+          class="text-sm text-red-600 mt-1 transition-opacity duration-300 ease-in-out opacity-100">
+          <span *ngIf="loginForm.get('login')?.errors?.['required']">Username é obrigatório.</span>
+        </p>
       </div>
 
-      <div class="mb-4">
-        <label class="block text-sm font-medium">Senha</label>
-        <input
-          [(ngModel)]="senha"
-          type="password"
-          name="senha"
-          class="w-full border border-gray-300 p-2 rounded"
-          required />
+      <!-- Campo Senha -->
+      <div class="mb-5 transition-all duration-300 ease-in-out">
+        <label for="senha" class="block text-sm font-medium text-gray-700 mb-1">Senha</label>
+        <div class="relative">
+          <input
+            id="senha"
+            type="password"
+            formControlName="senha"
+            name="senha"
+            class="w-full border rounded px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 border-gray-300 transition-all duration-300 ease-in-out placeholder-gray-400"
+            [ngClass]="{
+              'border-red-500': loginForm.get('senha')?.invalid && loginForm.get('senha')?.touched,
+            }"
+            placeholder="Digite sua senha"
+            required />
+        </div>
+        <p
+          *ngIf="loginForm.get('senha')?.invalid && loginForm.get('senha')?.touched"
+          class="text-sm text-red-600 mt-1 transition-opacity duration-300 ease-in-out opacity-100">
+          <span *ngIf="loginForm.get('senha')?.errors?.['required']">Senha é obrigatória.</span>
+        </p>
       </div>
 
-      <button class="w-full bg-blue-600 text-white p-2 rounded hover:bg-blue-700" type="submit">
+      <!-- Botão -->
+      <button
+        type="submit"
+        [disabled]="loginForm.invalid"
+        class="w-full px-4 py-2 text-white text-sm font-semibold rounded transition-all duration-300 ease-in-out disabled:cursor-not-allowed disabled:bg-gray-300 disabled:text-gray-500 bg-blue-600 hover:bg-blue-700">
         Entrar
       </button>
+
+      <!-- Erro geral -->
+      <p
+        *ngIf="error"
+        class="text-sm text-red-600 mt-4 text-center transition-opacity duration-300 ease-in-out">
+        {{ error }}
+      </p>
     </form>
   </div>
 </div>

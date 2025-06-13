@@ -31,5 +31,7 @@
     "strictInjectionParameters": true,
     "strictInputAccessModifiers": true,
     "strictTemplates": true
-  }
+  },
+  "include": ["src/main.ts", "src/polyfills.ts", "src/**/*.ts"],
+  "exclude": ["node_modules", "dist"]
 }

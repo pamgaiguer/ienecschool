@@ -1,5 +1,5 @@
-<!-- LOGIN ADMIN -->
-<ng-container *ngIf="isAdminLogin(); else routeHandler">
+<!-- LOGIN PÚBLICO OU ADMIN -->
+<ng-container *ngIf="isLoginRoute() || isAdminLogin(); else routeHandler">
   <router-outlet></router-outlet>
 </ng-container>
 
