@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { DataService } from '../../services/data.service';
 import { DiferencialService } from '../admin/diferenciais/diferencial.service';
 import { MetodologiasService } from '../admin/metodologias/metodologias.service';
 import { SegmentoService } from '../admin/segmentos-ensino/segmentos-ensino.service';
@@ -17,7 +16,6 @@ export class HomeComponent implements OnInit {
   diferenciais: any;
 
   constructor(
-    private dataService: DataService,
     private diferencialService: DiferencialService,
     private metodoService: MetodologiasService,
     private segmentoService: SegmentoService,

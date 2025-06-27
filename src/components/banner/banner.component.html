@@ -1,7 +1,33 @@
-<div
-  class="relative isolate flex items-center justify-center mt-4 mb-4 h-auto sm:h-[295px]">
+<!-- <div class="relative isolate flex items-center justify-center mt-4 mb-4 h-auto sm:h-[295px]">
   <img
     src="../../assets/banners/banner-dezembro-matriculas.jpg"
     alt="banner-matricula"
     class="w-full object-cover sm:object-contain max-h-full" />
+</div> -->
+
+<div class="relative mt-4 mb-4 h-auto sm:h-[295px] overflow-hidden">
+  <!-- Área de imagens com fade -->
+  <div class="relative w-full h-full">
+    <img
+      *ngFor="let banner of banners; let i = index"
+      [src]="banner.imagem"
+      alt="Banner {{ i + 1 }}"
+      class="absolute inset-0 w-full h-full object-cover sm:object-contain transition-opacity duration-700 ease-in-out"
+      [class.opacity-100]="i === currentSlide"
+      [class.opacity-0]="i !== currentSlide" />
+  </div>
+
+  <!-- Botão anterior -->
+  <button
+    (click)="prevSlide()"
+    class="absolute left-2 top-1/2 -translate-y-1/2 bg-white/70 rounded-full p-1 shadow hover:bg-white z-10">
+    ◀
+  </button>
+
+  <!-- Botão próximo -->
+  <button
+    (click)="nextSlide()"
+    class="absolute right-2 top-1/2 -translate-y-1/2 bg-white/70 rounded-full p-1 shadow hover:bg-white z-10">
+    ▶
+  </button>
 </div>
