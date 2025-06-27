@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from '../auth/auth.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -6,9 +7,12 @@ import { Component, OnInit } from '@angular/core';
   standalone: false,
 })
 export class DashboardComponent implements OnInit {
-  nomeUsuario: string = 'Pam Gaiguer'; // simulação, depois pode vir do AuthService
+  nomeUsuario: string = '...'; // será preenchido dinamicamente
 
-  constructor() {}
+  constructor(private authService: AuthService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    const nome = this.authService.getUsername();
+    this.nomeUsuario = nome ?? 'Usuário';
+  }
 }
