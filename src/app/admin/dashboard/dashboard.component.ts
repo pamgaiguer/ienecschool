@@ -7,12 +7,19 @@ import { AuthService } from '../auth/auth.service';
   standalone: false,
 })
 export class DashboardComponent implements OnInit {
-  nomeUsuario: string = '...'; // será preenchido dinamicamente
+  nomeUsuario: string = '...';
 
   constructor(private authService: AuthService) {}
 
   ngOnInit(): void {
-    const nome = this.authService.getUsername();
-    this.nomeUsuario = nome ?? 'Usuário';
+    this.authService.getUsuarioLogado().subscribe({
+      next: user => {
+        this.nomeUsuario = `${user.first_name} ${user.last_name}`.trim();
+      },
+      error: err => {
+        console.error('Erro ao buscar usuário logado:', err);
+        this.nomeUsuario = 'Usuário';
+      },
+    });
   }
 }

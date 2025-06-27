@@ -41,14 +41,13 @@ export class AuthService {
     return localStorage.getItem('token');
   }
 
-  getUsername(): string | null {
-    const token = localStorage.getItem('token');
-    if (!token) return null;
-    try {
-      const decoded: any = jwtDecode(token);
-      return decoded.username || null;
-    } catch (e) {
-      return null;
-    }
+  getUsuarioLogado() {
+    return this.http.get<{
+      id: number;
+      username: string;
+      email: string;
+      first_name: string;
+      last_name: string;
+    }>(`${environment.apiUrl}/api/user/me/`);
   }
 }
