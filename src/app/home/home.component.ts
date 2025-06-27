@@ -6,7 +6,6 @@ import { SegmentoService } from '../admin/segmentos-ensino/segmentos-ensino.serv
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss'],
   standalone: false,
 })
 export class HomeComponent implements OnInit {
