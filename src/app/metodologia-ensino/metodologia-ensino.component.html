@@ -1,8 +1,7 @@
 <app-banner></app-banner>
 
 <section class="container mx-auto px-3 md:my-20 lg:my-20">
-  <h2
-    class="text-4xl font-bold mt-20 mb-10 text-center agu-display agu-display-40 text-redDefault">
+  <h2 class="text-4xl font-bold mt-20 mb-10 text-center agu-display agu-display-40 text-redDefault">
     Metodologias de Ensino
   </h2>
 </section>
@@ -12,21 +11,21 @@
     class="bg-white p-6 rounded-lg shadow-md flex flex-row items-center mb-10 gap-8">
     <!-- Contêiner da imagem com tamanho fixo -->
     <div class="w-32 h-32 flex items-center justify-center rounded-full overflow-hidden">
-      <img [src]="item.src" alt="icons" class="w-full h-full object-cover" />
+      <img [src]="item.imagem" alt="icons" class="w-full h-full object-cover" />
     </div>
 
     <!-- Texto alinhado verticalmente -->
     <div class="flex-1">
-      <h2 class="text-xl font-semibold mb-2 text-mainFontColor">{{ item.title }}</h2>
-      <p class="text-mainFontColor">{{ item.description }}</p>
-      <div *ngIf="item.competencias && item.competencias.length > 0">
+      <h2 class="text-xl font-semibold mb-2 text-mainFontColor">{{ item.titulo }}</h2>
+      <p class="text-mainFontColor">{{ item.descricao }}</p>
+      <!-- <div *ngIf="item.competencias && item.competencias.length > 0">
         <br />
         <ul>
           <li *ngFor="let competencia of item.competencias">
             <strong>{{ competencia.titulo }}:</strong> {{ competencia.descricao }}
           </li>
         </ul>
-      </div>
+      </div> -->
     </div>
   </div>
 </section>

@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { environment } from '../../../environments/environment';
 
 export interface Diferencial {
   id: number;
@@ -17,7 +18,7 @@ interface ApiResponse<T> {
 
 @Injectable({ providedIn: 'root' })
 export class DiferencialService {
-  private apiUrl = 'http://localhost:8000/api/diferenciais/';
+  private apiUrl = `${environment.apiUrl}/api/diferenciais/`;
 
   constructor(private http: HttpClient) {}
 

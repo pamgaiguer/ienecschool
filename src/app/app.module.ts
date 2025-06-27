@@ -37,7 +37,6 @@ import { AdminModule } from './admin/admin.module';
     BrowserModule,
     AdminRoutingModule, // forChild
     AppRoutingModule, // forRoot - deve vir depois de AdminRoutingModule
-    AdminModule,
     SharedModule,
     ComponentsModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
@@ -46,6 +45,7 @@ import { AdminModule } from './admin/admin.module';
     }),
     BrowserAnimationsModule,
     ToastrModule.forRoot({
+      timeOut: 5000,
       positionClass: 'toast-top-right',
       preventDuplicates: true,
     }),

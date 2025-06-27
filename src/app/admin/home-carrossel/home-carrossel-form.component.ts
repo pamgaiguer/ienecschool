@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
-import { HomeCarrosselService } from './home-carrossel.service';
+import { HomeCarroselService } from './home-carrossel.service';
 
 @Component({
   selector: 'app-home-carrossel-form',
@@ -18,7 +18,7 @@ export class HomeCarrosselFormComponent implements OnInit {
 
   constructor(
     private fb: FormBuilder,
-    private carrosselHomeService: HomeCarrosselService,
+    private hCarrosselService: HomeCarroselService,
     private route: ActivatedRoute,
     private router: Router,
     private toastr: ToastrService,
@@ -26,9 +26,9 @@ export class HomeCarrosselFormComponent implements OnInit {
 
   ngOnInit(): void {
     this.form = this.fb.group({
-      titulo: [''],
-      descricao: [''],
       imagem: [null],
+      ativo: [false],
+      ordem: [false],
     });
 
     this.route.paramMap.subscribe(params => {
@@ -36,12 +36,12 @@ export class HomeCarrosselFormComponent implements OnInit {
       if (idParam) {
         this.isEdit = true;
         this.id = +idParam;
-        this.carrosselHomeService.getById(this.id).subscribe(Carrossel => {
+        this.hCarrosselService.getById(this.id).subscribe(hCarrossell => {
           this.form.patchValue({
-            titulo: Carrossel.titulo,
-            descricao: Carrossel.descricao,
+            ativo: hCarrossell.ativo,
+            ordem: hCarrossell.ordem,
           });
-          this.imagemPreview = Carrossel.imagem;
+          this.imagemPreview = hCarrossell.imagem;
         });
       }
     });
@@ -63,28 +63,29 @@ export class HomeCarrosselFormComponent implements OnInit {
   onSubmit() {
     this.loading = true;
     const formData = new FormData();
-    formData.append('titulo', this.form.value.titulo);
-    formData.append('descricao', this.form.value.descricao);
+    formData.append('ativo', String(this.form.value.ativo));
+    formData.append('ordem', String(this.form.value.ordem));
+
     if (this.form.value.imagem) {
       formData.append('imagem', this.form.value.imagem);
     }
 
     const request = this.isEdit
-      ? this.carrosselHomeService.update(this.id, formData)
-      : this.carrosselHomeService.create(formData);
+      ? this.hCarrosselService.update(this.id, formData)
+      : this.hCarrosselService.create(formData);
 
     request.subscribe({
       next: () => {
         this.toastr.success(
           this.isEdit ? 'Carrossel da Home atualizado com sucesso!' : 'Carrossel da Home criado com sucesso!',
         );
-        this.router.navigate(['/admin/home-banner']);
+        this.router.navigate(['/admin/home-carrossel']);
       },
       error: err => {
         if (err.status === 400 || err.status === 422) {
           this.toastr.error('Preencha todos os campos obrigatórios.');
         } else {
-          this.toastr.error('Erro ao salvar a imagem para o carrossel');
+          this.toastr.error('Erro ao salvar a imagem para o banner');
         }
       },
       complete: () => {

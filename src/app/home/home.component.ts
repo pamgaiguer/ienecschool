@@ -1,26 +1,54 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../../services/data.service';
+import { DiferencialService } from '../admin/diferenciais/diferencial.service';
+import { MetodologiasService } from '../admin/metodologias/metodologias.service';
+import { SegmentoService } from '../admin/segmentos-ensino/segmentos-ensino.service';
 
 @Component({
-    selector: 'app-home',
-    templateUrl: './home.component.html',
-    styleUrls: ['./home.component.scss'],
-    standalone: false
+  selector: 'app-home',
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.scss'],
+  standalone: false,
 })
 export class HomeComponent implements OnInit {
   diferenciaisItens: any[] = [];
+  metodologiasItens: any[] = [];
   segmentosItens: any[] = [];
-  teste: any = [];
+  diferenciais: any;
 
-  constructor(private dataService: DataService) {}
+  constructor(
+    private dataService: DataService,
+    private diferencialService: DiferencialService,
+    private metodoService: MetodologiasService,
+    private segmentoService: SegmentoService,
+  ) {}
 
   ngOnInit(): void {
-    this.dataService.getDiferenciais().subscribe(data => {
-      this.diferenciaisItens = data;
+    this.diferencialService.getAll().subscribe({
+      next: res => {
+        this.diferenciaisItens = res.results.sort((a, b) => a.id - b.id);
+      },
+      error: err => {
+        console.error('Erro ao buscar diferenciais:', err);
+      },
     });
 
-    this.dataService.getSegmentosEnsino().subscribe(data => {
-      this.segmentosItens = data;
+    this.metodoService.getAll().subscribe({
+      next: res => {
+        this.metodologiasItens = res.results.sort((a, b) => a.id - b.id);
+      },
+      error: err => {
+        console.error('Erro ao buscar metodologias:', err);
+      },
+    });
+
+    this.segmentoService.getAll().subscribe({
+      next: res => {
+        this.segmentosItens = res.results.sort((a, b) => a.id - b.id);
+      },
+      error: err => {
+        console.error('Erro ao buscar segmentos:', err);
+      },
     });
   }
 
@@ -52,21 +80,10 @@ export class HomeComponent implements OnInit {
 
   prevSlide(): void {
     this.currentSlideIndex =
-      (this.currentSlideIndex - 1 + this.carouselImages.length) %
-      this.carouselImages.length;
+      (this.currentSlideIndex - 1 + this.carouselImages.length) % this.carouselImages.length;
   }
 
   goToSlide(index: number): void {
     this.currentSlideIndex = index;
   }
-
-  partnerImages: any[] = [
-    { src: 'assets/parceiros-001-ANGLO.png', alt: 'Anglo' },
-    { src: 'assets/parceiros-002-CAMBRIDGE.png', alt: 'Cambridge' },
-    { src: 'assets/parceiros-003-PLENO.png', alt: 'Pleno' },
-    { src: 'assets/parceiros-004-PLURAL.png', alt: 'Plural' },
-    { src: 'assets/parceiros-005-ZOOM.png', alt: 'Zoom' },
-    { src: 'assets/parceiros-006-clube-leitura.png', alt: 'Clube de Leitura' },
-    { src: 'assets/parceiros-007-ciranda-livro.png', alt: 'Ciranda do Livro' },
-  ];
 }

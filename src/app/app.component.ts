@@ -16,28 +16,25 @@ export class AppComponent implements OnInit {
   ) {
     this.router.events.pipe(filter(event => event instanceof NavigationEnd)).subscribe(() => {
       this.checkRoute();
-      this.cdr.detectChanges(); // Garante atualização do DOM
+      this.cdr.detectChanges();
     });
   }
 
   title = 'Colégio Ienec';
 
-  private isLoginRouteResult: boolean = false; // Nova variável para /login
+  private isLoginRouteResult: boolean = false;
   private isAdminLoginResult: boolean = false;
   private isAdminRouteResult: boolean = false;
 
   isLoginRoute(): boolean {
-    console.log('isLoginRoute:', this.isLoginRouteResult, 'URL:', this.router.url);
     return this.isLoginRouteResult;
   }
 
   isAdminLogin(): boolean {
-    console.log('isAdminLogin:', this.isAdminLoginResult, 'URL:', this.router.url);
     return this.isAdminLoginResult;
   }
 
   isAdminRoute(): boolean {
-    console.log('isAdminRoute:', this.isAdminRouteResult, 'URL:', this.router.url);
     return this.isAdminRouteResult;
   }
 
@@ -46,16 +43,6 @@ export class AppComponent implements OnInit {
     this.isLoginRouteResult = currentRoute === '/login'; // Detecta a rota pública /login
     this.isAdminLoginResult = currentRoute === '/admin/login';
     this.isAdminRouteResult = currentRoute.startsWith('/admin/') && currentRoute !== '/admin/login';
-    console.log(
-      'checkRoute - URL:',
-      currentRoute,
-      'isLoginRoute:',
-      this.isLoginRouteResult,
-      'isAdminLogin:',
-      this.isAdminLoginResult,
-      'isAdminRoute:',
-      this.isAdminRouteResult,
-    );
   }
 
   ngOnInit(): void {

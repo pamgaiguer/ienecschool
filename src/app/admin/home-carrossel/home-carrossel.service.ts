@@ -1,7 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { environment } from '../../../environments/environment';
 
-export interface HomeCarrossel {
+export interface HomeCarrosel {
   id: number;
   imagem: string;
   ativo: boolean;
@@ -16,13 +17,13 @@ interface ApiResponse<T> {
 }
 
 @Injectable({ providedIn: 'root' })
-export class HomeCarrosselService {
-  private apiUrl = 'http://localhost:8000/home/carrossel/';
+export class HomeCarroselService {
+  private apiUrl = `${environment.apiUrl}/api/home/carrossel/`;
 
   constructor(private http: HttpClient) {}
 
   getAll() {
-    return this.http.get<ApiResponse<HomeCarrossel>>(this.apiUrl);
+    return this.http.get<ApiResponse<HomeCarrosel>>(this.apiUrl);
   }
 
   getById(id: number) {

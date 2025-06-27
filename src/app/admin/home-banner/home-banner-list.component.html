@@ -1,36 +1,61 @@
 <div class="p-6">
   <div class="flex justify-between items-center mb-4">
-    <h2 class="text-xl font-semibold">Metodologias</h2>
+    <div class="flex items-center gap-4">
+      <a
+        [routerLink]="['/admin/dashboard']"
+        class="text-blue-600 hover:text-blue-800 transition text-lg"
+        title="Voltar para o dashboard">
+        <i class="fas fa-arrow-left"></i>
+      </a>
+      <h2 class="text-xl font-semibold">Banner da Home</h2>
+    </div>
+
     <a
       [routerLink]="['/admin/home-banner/novo']"
       class="group inline-flex items-center gap-2 border border-blue-600 text-blue-600 px-4 py-2 rounded hover:bg-blue-700 hover:text-white transition">
       <i class="fas fa-plus text-blue-600 group-hover:text-white"></i>
-      Adicionar Metodologias
+      Adicionar novo banner da home
     </a>
   </div>
 
   <table class="min-w-full bg-white border">
     <thead>
       <tr class="bg-gray-100 text-left">
-        <th class="p-2 border">Título</th>
-        <th class="p-2 border">Descrição</th>
-        <th class="p-2 border text-center">Prévia</th>
+        <th class="p-2 border text-center">Imagem</th>
+        <th class="p-2 border text-center">Ativo</th>
+        <th class="p-2 border text-center">Usando como carrossel?</th>
         <th class="p-2 border text-center">Ações</th>
       </tr>
     </thead>
     <tbody>
       <tr *ngFor="let hBanner of homeBanner">
-        <td class="p-2 border">{{ hBanner.titulo }}</td>
-        <td class="p-2 border">{{ hBanner.descricao | slice: 0 : 100 }}...</td>
         <td class="p-2 border text-center">
-          <img [src]="hBanner.imagem" class="w-12 h-12 object-cover mx-auto" />
+          <img [src]="hBanner.imagem" class="w-500 h-30 object-cover rounded mx-auto border" alt="Preview" />
         </td>
+
         <td class="p-2 border text-center">
-          <div class="flex justify-center items-center gap-2">
+          <span
+            class="inline-block px-2 py-1 rounded-full text-xs font-semibold"
+            [ngClass]="hBanner.ativo ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'">
+            {{ hBanner.ativo ? 'Ativo' : 'Inativo' }}
+          </span>
+        </td>
+
+        <td class="p-2 border text-center">
+          <span
+            class="inline-block px-2 py-1 rounded-full text-xs font-semibold"
+            [ngClass]="
+              hBanner.usar_como_carrossel ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'
+            ">
+            {{ hBanner.usar_como_carrossel ? 'Sim' : 'Não' }}
+          </span>
+        </td>
+
+        <td class="p-2 border text-center">
+          <div class="flex justify-center gap-2">
             <a [routerLink]="['/admin/home-banner/editar', hBanner.id]" title="Editar">
               <i class="fas fa-pen-to-square text-blue-600 hover:text-blue-700 transition"></i>
             </a>
-
             <button (click)="abrirModal(hBanner.id)" title="Remover">
               <i class="fas fa-trash text-red-600 hover:text-red-700 transition"></i>
             </button>
@@ -39,7 +64,7 @@
       </tr>
     </tbody>
   </table>
-  <!-- Modal de Confirmação -->
+
   <div
     *ngIf="modalAberto"
     class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 backdrop-blur-sm">
@@ -52,13 +77,11 @@
         </button>
       </div>
 
-      <!-- Mensagem -->
       <p class="text-gray-700">
         Tem certeza que deseja remover este item?<br />
         <span class="text-sm text-gray-500">Essa ação não pode ser desfeita.</span>
       </p>
 
-      <!-- Ações -->
       <div class="flex justify-end mt-6 space-x-2">
         <button
           (click)="fecharModal()"

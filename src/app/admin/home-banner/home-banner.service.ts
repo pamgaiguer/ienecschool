@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { environment } from '../../../environments/environment';
 
 export interface HomeBanner {
   id: number;
@@ -17,7 +18,7 @@ interface ApiResponse<T> {
 
 @Injectable({ providedIn: 'root' })
 export class HomeBannerService {
-  private apiUrl = 'http://localhost:8000/api/home/banners/';
+  private apiUrl = `${environment.apiUrl}/api/home/banners/`;
 
   constructor(private http: HttpClient) {}
 

@@ -8,16 +8,14 @@
         Quem somos
       </h2>
       <p class="text-mainFontColor">
-        Somos um Colégio de gente para gente, onde cada aluno é valorizado como parte
-        fundamental do dia a dia. Nossa missão é oferecer uma educação de excelência, com
-        foco no desenvolvimento integral dos estudantes, preparando-os para os desafios do
-        futuro.
+        Somos um Colégio de gente para gente, onde cada aluno é valorizado como parte fundamental do dia a
+        dia. Nossa missão é oferecer uma educação de excelência, com foco no desenvolvimento integral dos
+        estudantes, preparando-os para os desafios do futuro.
         <br />
         <br />
-        Muito mais do que uma instituição de ensino; somos uma família. Cada aluno é único
-        e essencial para a construção de uma comunidade forte e unida. Juntos, estamos
-        empenhados em formar cidadãos conscientes, responsáveis e preparados para
-        transformar o mundo.
+        Muito mais do que uma instituição de ensino; somos uma família. Cada aluno é único e essencial para a
+        construção de uma comunidade forte e unida. Juntos, estamos empenhados em formar cidadãos conscientes,
+        responsáveis e preparados para transformar o mundo.
       </p>
       <br />
       <br />
@@ -39,8 +37,7 @@
         </div>
 
         <!-- Slider indicators -->
-        <div
-          class="relative z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
+        <div class="relative z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
           <button
             *ngFor="let image of carouselImages; let i = index"
             type="button"
@@ -109,27 +106,26 @@
       *ngFor="let item of diferenciaisItens"
       class="bg-white p-6 rounded-lg shadow-md flex flex-col items-center">
       <div class="w-24 h-24 mb-8 rounded-lg flex items-center justify-center">
-        <img [src]="item.imgSrc" alt="icons" class="max-w-full max-h-full" />
+        <img [src]="item.imagem" alt="icons" class="max-w-full max-h-full" />
       </div>
       <h2 class="text-center text-xl font-bold mb-4 text-mainFontColor">
-        {{ item.title }}
+        {{ item.titulo }}
       </h2>
-      <!-- <p class="text-mainFontColor text-center">{{ item.description }}</p> -->
     </div>
   </div>
 </section>
 
 <section class="container mx-auto my-20">
-  <h1
-    class="agu-display agu-display-20 text-3xl font-bold text-center my-8 uppercase text-blueDefault">
+  <h1 class="agu-display agu-display-20 text-3xl font-bold text-center my-8 uppercase text-blueDefault">
     Metodologias
   </h1>
   <div class="flex flex-wrap justify-center">
     <ul class="flex flex-wrap justify-center space-x-4">
-      <li *ngFor="let image of partnerImages" class="mb-4 sm:mb-0">
+      <li *ngFor="let items of metodologiasItens" class="mb-4 sm:mb-0">
         <img
-          [src]="image.src"
-          [alt]="image.alt"
+          [src]="items.imagem"
+          [alt]="items.titulo"
+          [title]="items.titulo"
           class="w-32 h-32 object-cover shadow rounded-full" />
       </li>
     </ul>
@@ -137,28 +133,24 @@
 </section>
 
 <section class="container mx-auto mt-4 text-mainFontColor">
-  <h1
-    class="agu-display agu-display-40 text-redDefault text-3xl font-bold text-center mt-14 mb-10 uppercase">
+  <h1 class="agu-display agu-display-40 text-redDefault text-3xl font-bold text-center mt-14 mb-10 uppercase">
     Segmentos de Ensino
   </h1>
   <h4 class="text-center my-10 text-mainFontColor">
-    No Colégio IENEC, oferecemos uma trajetória educacional completa que abrange desde a
-    Educação Infantil até o Ensino Médio.
+    No Colégio IENEC, oferecemos uma trajetória educacional completa que abrange desde a Educação Infantil até
+    o Ensino Médio.
   </h4>
   <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
     <div
       *ngFor="let item of segmentosItens"
       class="relative flex flex-col min-w-0 break-words bg-white overflow-hidden shadow hover:cursor-pointer w-full mb-6 rounded-lg hover:shadow-lg max-w-sm">
-      <img
-        [src]="item.imgSrc"
-        class="w-[375px] h-[490px] align-middle rounded-t-lg object-contain" />
+      <img [src]="item.imagem" class="w-[375px] h-[490px] align-middle rounded-t-lg object-contain" />
       <blockquote class="relative p-8">
-        <h4
-          class="text-center text-2xl md:text-xl lg:text-xl font-bold text-mainFontColor">
-          {{ item.title }}
+        <h4 class="text-center text-2xl md:text-xl lg:text-xl font-bold text-mainFontColor">
+          {{ item.titulo }}
         </h4>
         <p class="text-center md:text-md lg:text-md font-light mt-2 text-mainFontColor">
-          {{ item.description }}
+          {{ item.descricao }}
         </p>
       </blockquote>
     </div>

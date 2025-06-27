@@ -1,20 +1,24 @@
 import { Component, OnInit } from '@angular/core';
-import { DataService } from '../../services/data.service';
+import { DiferencialService } from '../admin/diferenciais/diferencial.service';
 
 @Component({
-    selector: 'app-diferenciais',
-    templateUrl: './diferenciais.component.html',
-    styleUrls: ['./diferenciais.component.scss'],
-    standalone: false
+  selector: 'app-diferenciais',
+  templateUrl: './diferenciais.component.html',
+  standalone: false,
 })
 export class DiferenciaisComponent implements OnInit {
-  diferenciaisItens: any[] = [];
+  diferenciais: any[] = [];
 
-  constructor(private dataService: DataService) {}
+  constructor(private diferencialService: DiferencialService) {}
 
   ngOnInit(): void {
-    this.dataService.getFullDiferenciais().subscribe(data => {
-      this.diferenciaisItens = data;
+    this.diferencialService.getAll().subscribe({
+      next: res => {
+        this.diferenciais = res.results.sort((a, b) => a.id - b.id);
+      },
+      error: err => {
+        console.error('Erro ao buscar diferenciais:', err);
+      },
     });
   }
 }

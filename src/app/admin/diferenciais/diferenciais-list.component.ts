@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 import { DiferencialService } from './diferencial.service';
 import { NotificationService } from 'src/app/shared/notification.service';
 
@@ -16,14 +15,12 @@ export class DiferenciaisListComponent implements OnInit {
   constructor(
     private diferencialService: DiferencialService,
     private notification: NotificationService,
-    private router: Router,
   ) {}
 
   ngOnInit(): void {
     this.diferencialService.getAll().subscribe({
       next: res => {
-        console.log('Diferenciais recebidos:', res);
-        this.diferenciais = res.results;
+        this.diferenciais = res.results.sort((a, b) => a.id - b.id);
       },
       error: err => {
         console.error('Erro ao buscar diferenciais:', err);
@@ -46,7 +43,7 @@ export class DiferenciaisListComponent implements OnInit {
 
     this.diferencialService.delete(this.idParaRemover).subscribe({
       next: () => {
-        this.notification.success('Removido com sucesso!');
+        this.notification.error('Removido com sucesso!');
         this.diferenciais = this.diferenciais.filter(d => d.id !== this.idParaRemover);
         this.fecharModal();
       },

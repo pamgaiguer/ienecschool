@@ -1,4 +1,5 @@
 export const environment = {
   production: true,
-  apiUrl: 'https://sua-api-em-producao.com',
+  apiUrl: 'https://api.colegioienec.com',
 };
+//nao usar barra aqui ou ferra todo o ecossistema

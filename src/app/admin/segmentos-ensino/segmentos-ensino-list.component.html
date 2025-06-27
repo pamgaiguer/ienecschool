@@ -1,8 +1,16 @@
 <div class="p-6">
   <div class="flex justify-between items-center mb-4">
-    <h2 class="text-xl font-semibold">Segmentos</h2>
+    <div class="flex items-center gap-4">
+      <a
+        [routerLink]="['/admin/dashboard']"
+        class="text-blue-600 hover:text-blue-800 transition text-lg"
+        title="Voltar para o dashboard">
+        <i class="fas fa-arrow-left"></i>
+      </a>
+      <h2 class="text-xl font-semibold">Segmentos</h2>
+    </div>
     <a
-      [routerLink]="['/admin/segmentos-ensino/novo']"
+      [routerLink]="['/admin/manage-segmentos/novo']"
       class="group inline-flex items-center gap-2 border border-blue-600 text-blue-600 px-4 py-2 rounded hover:bg-blue-700 hover:text-white transition">
       <i class="fas fa-plus text-blue-600 group-hover:text-white"></i>
       Adicionar Segmento de Ensino
@@ -27,7 +35,7 @@
         </td>
         <td class="p-2 border text-center">
           <div class="flex justify-center items-center gap-2">
-            <a [routerLink]="['/admin/segmentos-ensino/editar', segmento.id]" title="Editar">
+            <a [routerLink]="['/admin/manage-segmentos/editar', segmento.id]" title="Editar">
               <i class="fas fa-pen-to-square text-blue-600 hover:text-blue-700 transition"></i>
             </a>
 

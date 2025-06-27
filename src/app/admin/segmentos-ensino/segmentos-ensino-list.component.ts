@@ -22,8 +22,7 @@ export class SegmentosListComponent implements OnInit {
   ngOnInit(): void {
     this.SegmentoService.getAll().subscribe({
       next: res => {
-        console.log('segmentos recebidos:', res);
-        this.segmentos = res.results;
+        this.segmentos = res.results.sort((a, b) => a.id - b.id);
       },
       error: err => {
         console.error('Erro ao buscar segmentos:', err);

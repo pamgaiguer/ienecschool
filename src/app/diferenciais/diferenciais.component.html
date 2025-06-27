@@ -1,24 +1,21 @@
 <app-banner></app-banner>
 <section class="container mx-auto my-20">
-  <h2
-    class="text-4xl font-bold mt-20 mb-10 text-center agu-display agu-display-40 text-redDefault">
+  <h2 class="text-4xl font-bold mt-20 mb-10 text-center agu-display agu-display-40 text-redDefault">
     Nossos Diferenciais
   </h2>
 </section>
 <section class="container mx-auto my-20">
   <div
-    *ngFor="let item of diferenciaisItens"
+    *ngFor="let dif of diferenciais"
     class="bg-white p-6 rounded-lg shadow-md flex flex-row items-center mb-10">
-    <!-- Imagem circular à esquerda -->
-    <div
-      class="flex-shrink-0 w-24 h-24 mr-8 rounded-full overflow-hidden flex items-center justify-center">
-      <img [src]="item.imgSrc" alt="icons" class="w-24 h-24 object-cover" />
+    <div class="flex-shrink-0 w-24 h-24 mr-8 rounded-full overflow-hidden flex items-center justify-center">
+      <img [src]="dif.imagem" alt="icons" class="w-24 h-24 object-cover" />
     </div>
 
     <!-- Texto à direita -->
     <div class="flex flex-col">
-      <h2 class="text-left text-xl font-bold mb-4">{{ item.title }}</h2>
-      <p class="text-mainFontColor text-left">{{ item.description }}</p>
+      <h2 class="text-left text-xl font-bold mb-4">{{ dif.titulo }}</h2>
+      <p class="text-mainFontColor text-left">{{ dif.descricao }}</p>
     </div>
   </div>
 </section>

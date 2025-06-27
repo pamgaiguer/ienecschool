@@ -74,13 +74,17 @@ export class DiferencialFormComponent implements OnInit {
       : this.diferencialService.create(formData);
 
     request.subscribe({
-      next: () => {
+      next: response => {
+        console.log('Resposta da API:', response.status, response);
         this.toastr.success(
           this.isEdit ? 'Diferencial atualizado com sucesso!' : 'Diferencial criado com sucesso!',
         );
-        this.router.navigate(['/admin/manage-diferenciais']);
+        setTimeout(() => {
+          this.router.navigate(['/admin/manage-diferenciais']);
+        }, 2000);
       },
       error: err => {
+        console.error('Erro na requisição:', err);
         if (err.status === 400 || err.status === 422) {
           this.toastr.error('Preencha todos os campos obrigatórios.');
         } else {

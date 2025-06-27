@@ -26,9 +26,9 @@ export class HomeBannerFormComponent implements OnInit {
 
   ngOnInit(): void {
     this.form = this.fb.group({
-      titulo: [''],
-      descricao: [''],
       imagem: [null],
+      ativo: [false],
+      usar_como_carrossel: [false],
     });
 
     this.route.paramMap.subscribe(params => {
@@ -38,8 +38,8 @@ export class HomeBannerFormComponent implements OnInit {
         this.id = +idParam;
         this.hBannerService.getById(this.id).subscribe(hBanner => {
           this.form.patchValue({
-            titulo: hBanner.titulo,
-            descricao: hBanner.descricao,
+            ativo: hBanner.ativo,
+            usar_como_carrossel: hBanner.usar_como_carrossel,
           });
           this.imagemPreview = hBanner.imagem;
         });
@@ -63,8 +63,9 @@ export class HomeBannerFormComponent implements OnInit {
   onSubmit() {
     this.loading = true;
     const formData = new FormData();
-    formData.append('titulo', this.form.value.titulo);
-    formData.append('descricao', this.form.value.descricao);
+    formData.append('ativo', String(this.form.value.ativo));
+    formData.append('usar_como_carrossel', String(this.form.value.usar_como_carrossel));
+
     if (this.form.value.imagem) {
       formData.append('imagem', this.form.value.imagem);
     }

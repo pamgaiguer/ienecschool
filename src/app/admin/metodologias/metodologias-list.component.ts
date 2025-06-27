@@ -20,8 +20,7 @@ export class MetodologiasListComponent implements OnInit {
   ngOnInit(): void {
     this.metodologiaService.getAll().subscribe({
       next: res => {
-        console.log('metodologias recebidos:', res);
-        this.metodologias = res.results;
+        this.metodologias = res.results.sort((a, b) => a.id - b.id);
       },
       error: err => {
         console.error('Erro ao buscar metodologia:', err);

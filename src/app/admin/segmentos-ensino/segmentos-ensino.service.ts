@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { environment } from '../../../environments/environment';
 
 export interface Segmento {
   id: number;
@@ -18,7 +19,7 @@ interface ApiResponse<T> {
 
 @Injectable({ providedIn: 'root' })
 export class SegmentoService {
-  private apiUrl = 'http://localhost:8000/api/home/segmentos/';
+  private apiUrl = `${environment.apiUrl}/api/home/segmentos/`;
 
   constructor(private http: HttpClient) {}
 
